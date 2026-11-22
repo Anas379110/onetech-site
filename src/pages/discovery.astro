@@ -1,0 +1,165 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base current="" title="اطلب جلسة اكتشاف مجانية — OneTech Solutions" description="نموذج طلب جلسة اكتشاف مجانية: نصف ساعة نفهم فيها عمليتك اليومية ونخبرك بصراحة إن كانت الأتمتة تناسبك، بلا التزام.">
+
+	<section class="page-hero">
+		<div class="wrap">
+			<div class="eyebrow">جلسة اكتشاف مجانية</div>
+			<h1>اطلب جلسة الاكتشاف</h1>
+			<p>عبّئ ما تعرفه من إجابات، وسيُفتح واتساب برسالة جاهزة تحمل طلبك — تراجعها ثم ترسلها بنفسك. نصف ساعة نفهم فيها عمليتك، بلا التزام.</p>
+		</div>
+	</section>
+
+	<section>
+		<div class="wrap">
+			<form id="discovery-form" class="disc-form">
+				<h2>عنك وعن نشاطك</h2>
+				<label>الاسم
+					<input type="text" name="name" autocomplete="name" required />
+				</label>
+				<label>نوع النشاط
+					<select name="sector" required>
+						<option value="">اختر…</option>
+						<option>متجر</option>
+						<option>صيدلية</option>
+						<option>مطعم</option>
+						<option>عيادة</option>
+						<option>مكتب عقارات</option>
+						<option>شركة توزيع / استيراد</option>
+						<option>مدرسة / معهد</option>
+						<option>أخرى</option>
+					</select>
+				</label>
+				<label>المدينة
+					<input type="text" name="city" autocomplete="address-level2" />
+				</label>
+				<label>قناة التواصل المفضلة للجلسة
+					<select name="channel">
+						<option>واتساب</option>
+						<option>مكالمة هاتفية</option>
+						<option>بريد إلكتروني</option>
+					</select>
+				</label>
+
+				<h2>عمليتك اليومية</h2>
+				<label>ما أهم ثلاث مشاكل تأخذ وقتكم أو تكلفكم مالًا اليوم؟
+					<textarea name="problems" rows="3" maxlength="300"></textarea>
+				</label>
+				<label>ما الأدوات والبرامج التي تستخدمونها الآن؟ (محاسبة، جداول، تطبيقات…)
+					<textarea name="tools" rows="2" maxlength="300"></textarea>
+				</label>
+
+				<h2>خمسة أسئلة تساعدنا نقدّر الحجم</h2>
+				<p class="disc-hint">اختر الأقرب لواقعك في كل سؤال. لا توجد إجابة خاطئة — الإجابة الصريحة توفر علينا كلنا وقتًا.</p>
+				<label>كم نظامًا أو أداة تريد ربطها؟
+					<select name="s1">
+						<option value="0">نظام واحد</option>
+						<option value="1">2–3 أنظمة</option>
+						<option value="2">4–6 أنظمة</option>
+						<option value="3">أكثر من 6 أو نظام قديم</option>
+					</select>
+				</label>
+				<label>كم حجم العمل الشهري؟ (رسائل، طلبات، فواتير)
+					<select name="s2">
+						<option value="0">أقل من 50</option>
+						<option value="1">50 – 300</option>
+						<option value="2">300 – 2,000</option>
+						<option value="3">أكثر من 2,000</option>
+					</select>
+				</label>
+				<label>ما نوع المدخلات التي تتعامل معها؟
+					<select name="s3">
+						<option value="0">منظمة: نماذج وأزرار</option>
+						<option value="1">رسائل نصية متوقعة وقصيرة</option>
+						<option value="2">نص حر أو صور أو PDF</option>
+						<option value="3">صوت أو لهجات أو مستندات معقدة</option>
+					</select>
+				</label>
+				<label>ما واجهة الموظفين التي تحتاجها؟
+					<select name="s4">
+						<option value="0">لا حاجة — إشعارات فقط</option>
+						<option value="1">جدول أو لوحة بسيطة</option>
+						<option value="2">شاشات إدخال وصلاحيات</option>
+						<option value="3">نظام متعدد الأدوار وموبايل</option>
+					</select>
+				</label>
+				<label>كم تريد أن يكون النظام مستقلًا؟
+					<select name="s5">
+						<option value="0">ينفذ قاعدة ثابتة</option>
+						<option value="1">يقترح ويوافق إنسان</option>
+						<option value="2">يقرر ضمن حدود واضحة</option>
+						<option value="3">ينفذ سلسلة مهام باستقلالية</option>
+					</select>
+				</label>
+
+				<button type="submit" class="cta">جهّز رسالة الطلب في واتساب</button>
+				<p class="disc-hint disc-hint-after">لن يُرسل شيء تلقائيًا: يفتح واتساب برسالة جاهزة، تراجعها، وتضغط إرسال بنفسك. إجاباتك تُكتب في هذه الصفحة فقط ولا تُخزَّن على الموقع. سنربط النموذج بأتمتة المتابعة لاحقًا بعد اعتمادها.</p>
+				<div id="disc-fallback" class="disc-fallback" hidden>
+					<p class="disc-hint">إن لم يفتح واتساب أو وصلت الرسالة ناقصة على جهازك، انسخ نص الطلب وأرسله لنا يدويًا على واتساب — بنفس الرقم المعروض في أسفل الصفحة.</p>
+					<button id="disc-copy" type="button" class="disc-copy-btn">نسخ نص الطلب</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+</Base>
+
+<script>
+document.getElementById('discovery-form')?.addEventListener('submit', (e) => {
+	e.preventDefault();
+	const f = e.target;
+	const v = (n) => (f.elements[n]?.selectedOptions?.[0]?.textContent || f.elements[n]?.value || '').trim();
+	const lines = [
+		'طلب جلسة اكتشاف مجانية — OneTech Solutions',
+		'',
+		'الاسم: ' + v('name'),
+		'نوع النشاط: ' + v('sector'),
+		v('city') && 'المدينة: ' + v('city'),
+		'قناة التواصل المفضلة: ' + v('channel'),
+		'',
+		v('problems') && 'أهم المشاكل اليومية: ' + v('problems'),
+		v('tools') && 'الأدوات الحالية: ' + v('tools'),
+		'',
+		'الأسئلة الخمسة:',
+		'عدد الأنظمة: ' + v('s1'),
+		'حجم العمل الشهري: ' + v('s2'),
+		'نوع المدخلات: ' + v('s3'),
+		'واجهة الموظفين: ' + v('s4'),
+		'استقلالية النظام: ' + v('s5'),
+	].filter(Boolean).join('\n');
+	window.open('https://wa.me/963995263075?text=' + encodeURIComponent(lines), '_blank', 'noopener');
+	const fb = document.getElementById('disc-fallback');
+	if (fb) fb.hidden = false;
+	document.getElementById('disc-copy')?.addEventListener('click', async (ev) => {
+		ev.preventDefault();
+		const btn = ev.currentTarget;
+		let ok = false;
+		try { await navigator.clipboard.writeText(lines); ok = true; }
+		catch (_) {
+			const t = document.createElement('textarea');
+			t.value = lines; document.body.appendChild(t); t.select();
+			try { ok = document.execCommand('copy'); } catch (e2) { ok = false; }
+			t.remove();
+		}
+		if (btn) btn.textContent = ok ? 'نُسخ النص ✓ الصقه في محادثة واتساب معنا' : 'تعذر النسخ — حدد النص وانسخه يدويًا';
+	});
+});
+</script>
+
+<style>
+	.disc-form { max-width: 640px; }
+	.disc-form h2 { color: var(--navy); font-size: 1.15rem; font-weight: 800; margin: 34px 0 16px; }
+	.disc-form label { display: block; font-weight: 700; color: var(--navy); font-size: .95rem; margin-bottom: 18px; }
+	.disc-form input, .disc-form select, .disc-form textarea {
+		display: block; width: 100%; margin-top: 8px; padding: 12px 14px; font: inherit; font-weight: 400;
+		color: var(--navy); background: #fff; border: 1px solid var(--hairline, #E2E8F0); border-radius: 10px;
+	}
+	.disc-form input:focus, .disc-form select:focus, .disc-form textarea:focus { outline: 2px solid var(--blue); outline-offset: 1px; }
+	.disc-hint { color: var(--muted); font-size: .9rem; margin: 0 0 18px; }
+	.disc-hint-after { margin: 16px 0 0; line-height: 1.9; }
+	.disc-fallback { margin-top: 14px; padding: 14px 16px; border: 1px dashed rgba(15,23,42,.3); border-radius: 12px; }
+	.disc-copy-btn { margin-top: 8px; padding: 10px 18px; border-radius: 10px; border: 1px solid rgba(15,23,42,.45); background: transparent; color: inherit; font: inherit; font-weight: 700; cursor: pointer; }
+	.disc-copy-btn:hover { background: rgba(15,23,42,.06); }
+	.disc-form .cta { border: none; cursor: pointer; font: inherit; font-weight: 800; margin-top: 10px; }
+</style>
