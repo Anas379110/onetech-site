@@ -5,28 +5,42 @@ import CtaBand from '../components/CtaBand.astro';
 ---
 <Base current="home" title="OneTech Solutions — أنظمة أتمتة وذكاء اصطناعي بالعربية" description="OneTech Solutions تبني أنظمة أتمتة مدعومة بالذكاء الاصطناعي تعمل بالعربية: استقبال عملائك على قنواتهم، تنبيهات الطلبات والمخزون، ومساعد يجيب عن أسئلة زبائنك من ملفاتك.">
 
-	<section class="hero">
-		<div class="wrap hero-grid">
+	<section class="hero6">
+		<div class="wrap hero6-grid">
 			<div>
-				<h1>أنظمة تشغيل ذكية ترد على عملائك وتنظّم طلباتك وتوفّر وقت فريقك.</h1>
+				<div class="eyebrow">أتمتة وذكاء اصطناعي — بالعربية</div>
+				<h1>أنظمة تشغيل ذكية ترد على عملائك، تنظّم طلباتك، <span class="grad">وتوفّر وقت فريقك.</span></h1>
 				<p class="lead">
 					OneTech Solutions تبني أنظمة أتمتة مدعومة بالذكاء الاصطناعي تعمل بالعربية، وتبدأ بثلاث خدمات:
 					استقبال عملائك على قنواتهم، تنبيهات الطلبات والمخزون، ومساعد يجيب عن أسئلة زبائنك من ملفاتك.
 					أما التركيب المحلي والعمل دون إنترنت فمرحلة قادمة ضمن خارطة الطريق.
 				</p>
-				<ul class="benefits">
-					<li>رد أسرع على عملائك على القنوات التي يستخدمونها</li>
-					<li>أخطاء أقل في الطلبات والفواتير والمخزون</li>
-					<li>وقت موفَّر لفريقك كل شهر، تقيسه أرقام قبل وبعد</li>
-				</ul>
-				<a class="cta" href="#contact">احجز جلسة اكتشاف مجانية</a>
-				<p class="cta-note">نصف ساعة نفهم فيها عمليتك ونخبرك بصراحة إن كانت الأتمتة تناسبك.</p>
+				<div class="hero-ctas">
+					<a class="cta" href="/discovery">احجز جلسة اكتشاف مجانية</a>
+					<a class="cta-ghost" href="/services">استكشف الخدمات</a>
+				</div>
+				<div class="trust-row">
+					<span>بلا التزام قبل أن تعرف الجدوى</span>
+					<span>عرض مكتوب بالسعر والمدة</span>
+					<span>قياس النتيجة قبل وبعد</span>
+				</div>
 			</div>
-			<div class="hero-flow" role="img" aria-label="مخطط توضيحي لطريقة العمل: رسالة العميل تدخل النظام فتخرج ردًا تلقائيًا أو تنبيه مخزون أو تقريرًا يوميًا">
-				<div class="flow-title" aria-hidden="true">كيف يعمل النظام؟</div>
-				<div class="flow-node" aria-hidden="true"><span class="dot"></span><div>عميلك يراسلك على قناته<small>واتساب أو القناة التي تعتمدها</small></div></div>
+			<div class="panel" role="img" aria-label="مخطط توضيحي لطريقة العمل: رسالة العميل تدخل النظام فتخرج ردًا تلقائيًا أو تنبيه مخزون أو تقريرًا يوميًا">
+				<span class="float-chip a" aria-hidden="true">يعمل بالعربية</span>
+				<span class="float-chip b" aria-hidden="true">تُقاس النتيجة بالأرقام</span>
+				<div class="panel-head" aria-hidden="true">
+					<span class="panel-title">كيف يعمل النظام؟</span>
+					<span class="panel-live">جاهز للعمل</span>
+				</div>
+				<div class="msg" aria-hidden="true">
+					<span class="p-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.4 8.4 0 01-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.4 8.4 0 013.8-.9h.5a8.5 8.5 0 018 8v.5z"/></svg></span>
+					<div>عميلك يراسلك على قناته<small>واتساب أو القناة التي تعتمدها</small></div>
+				</div>
 				<div class="flow-arrow" aria-hidden="true"><svg width="16" height="20" viewBox="0 0 16 20" fill="none"><path d="M8 1v14m0 0l-5-5m5 5l5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-				<div class="flow-node" aria-hidden="true"><span class="dot"></span><div>نظام OneTech يستقبل ويعالج<small>فرز الطلب ومطابقته مع ملفاتك وسياساتك</small></div></div>
+				<div class="core" aria-hidden="true">
+					<span class="p-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
+					<div>نظام OneTech يستقبل ويعالج<small>فرز الطلب ومطابقته مع ملفاتك وسياساتك</small></div>
+				</div>
 				<div class="flow-arrow" aria-hidden="true"><svg width="16" height="20" viewBox="0 0 16 20" fill="none"><path d="M8 1v14m0 0l-5-5m5 5l5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
 				<div class="flow-outcomes" aria-hidden="true">
 					<span>رد تلقائي على العميل</span>
@@ -37,29 +51,63 @@ import CtaBand from '../components/CtaBand.astro';
 		</div>
 	</section>
 
+	<div class="strip rv">
+		<div class="wrap">
+			<div class="strip-label">تقنيات نبني بها أنظمتنا</div>
+			<div class="strip-row">
+				<span>n8n</span>
+				<span>Telegram Bot API</span>
+				<span>Supabase / PostgreSQL</span>
+				<span>Google Workspace</span>
+				<span>نماذج ذكاء اصطناعي سحابية</span>
+				<span>نماذج محلية للبيانات الحساسة</span>
+			</div>
+		</div>
+	</div>
+
 	<section id="offers">
 		<div class="wrap">
-			<div class="eyebrow">خدمات الإطلاق</div>
-			<h2>ثلاث خدمات في خطة الإطلاق</h2>
-			<p class="section-sub">نبدأ بما يحل مشكلة يومية واحدة بوضوح، ونقيس النتيجة قبل أي توسع.</p>
-			<div class="cards">
-				<div class="card">
+			<div class="eyebrow rv">خدمات الإطلاق</div>
+			<h2 class="rv">ثلاث خدمات في خطة الإطلاق</h2>
+			<p class="section-sub rv">نبدأ بما يحل مشكلة يومية واحدة بوضوح، ونقيس النتيجة قبل أي توسع.</p>
+			<div class="bento rv-stagger">
+				<div class="card b-main">
 					<Icon name="chat" />
 					<h3>استقبال العملاء على قنواتهم</h3>
 					<p>قناة تواصل، فجدول عملاء، فرد تلقائي، فمتابعة، فتقرير يومي — لتقليل الرسائل الضائعة والعملاء المنتظرين بلا جواب.</p>
+					<div class="mini-flow" aria-hidden="true">
+						<span>قناة التواصل</span>
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+						<span>جدول العملاء</span>
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+						<span>رد تلقائي</span>
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+						<span>متابعة وتقرير</span>
+					</div>
+					<a class="card-link" href="/services">تفاصيل الخدمة</a>
 				</div>
-				<div class="card">
+				<div class="card b-half">
 					<Icon name="bell" />
 					<h3>تنبيهات الطلبات والمخزون</h3>
 					<p>إشعار بكل طلب جديد، وتنبيه عند نقص صنف قبل أن تكتشفه متأخرًا.</p>
+					<a class="card-link" href="/services">تفاصيل الخدمة</a>
 				</div>
-				<div class="card">
+				<div class="card b-half">
 					<Icon name="spark" />
 					<h3>مساعد ذكاء اصطناعي عربي</h3>
 					<p>يجيب عن أسئلة زبائنك المتكررة من ملف أسعارك وسياساتك أنت، بالعربية.</p>
+					<a class="card-link" href="/services">تفاصيل الخدمة</a>
+				</div>
+				<div class="card b-wide roadmap">
+					<div class="grow">
+						<span class="tag">خارطة طريق</span>
+						<h3>المستويات المتقدمة</h3>
+						<p>معالجة المستندات المتقدمة، أنظمة القطاعات الجاهزة، الوكلاء الأذكياء، والتركيب المحلي — تُعلن عند جهوزها الفعلي، لا قبل ذلك.</p>
+					</div>
+					<a class="card-link" href="/services">كل المستويات</a>
 				</div>
 			</div>
-			<div class="roadmap-note">
+			<div class="roadmap-note rv">
 				تجربتك الأولى مشروع تجريبي محدد النطاق يبدأ من <b>300$</b> محليًا، بعرض مكتوب يوضح السعر والمدة قبل أي التزام.
 			</div>
 		</div>
@@ -67,38 +115,101 @@ import CtaBand from '../components/CtaBand.astro';
 
 	<section id="how" class="soft">
 		<div class="wrap">
-			<div class="eyebrow">منهجيتنا</div>
-			<h2>كيف نعمل</h2>
-			<p class="section-sub">أربع خطوات واضحة، بلا التزام قبل أن تعرف الجدوى.</p>
-			<ol class="steps">
-				<li><div><b>جلسة اكتشاف مجانية</b><span>نصف ساعة نفهم فيها عمليتك اليومية ونقيس وقتها وتكلفتها الحالية.</span></div></li>
-				<li><div><b>توصية صريحة</b><span>نخبرك بصراحة إن كانت الأتمتة تناسبك، ونحسب معك العائد المتوقع قبل أن تدفع.</span></div></li>
-				<li><div><b>عرض واضح</b><span>نطاق محدد ومدة محددة وتجربة أولى قصيرة، بلا مفاجآت.</span></div></li>
-				<li><div><b>قياس قبل وبعد</b><span>أرقام حقيقية من نشاطك: وقت الرد، الأخطاء، والساعات الموفَّرة.</span></div></li>
+			<div class="eyebrow rv">منهجيتنا</div>
+			<h2 class="rv">كيف نعمل</h2>
+			<p class="section-sub rv">أربع خطوات واضحة، بلا التزام قبل أن تعرف الجدوى.</p>
+			<ol class="timeline rv">
+				<li><b>جلسة اكتشاف مجانية</b><span>نصف ساعة نفهم فيها عمليتك اليومية ونقيس وقتها وتكلفتها الحالية.</span></li>
+				<li><b>توصية صريحة</b><span>نخبرك بصراحة إن كانت الأتمتة تناسبك، ونحسب معك العائد المتوقع قبل أن تدفع.</span></li>
+				<li><b>عرض واضح</b><span>نطاق محدد ومدة محددة وتجربة أولى قصيرة، بلا مفاجآت.</span></li>
+				<li><b>قياس قبل وبعد</b><span>أرقام حقيقية من نشاطك: وقت الرد، الأخطاء، والساعات الموفَّرة.</span></li>
 			</ol>
-			<div class="roadmap-note">
+			<div class="roadmap-note rv">
 				<b>نصمم للفشل:</b> لكل أتمتة نبنيها تنبيهُ فشل فوري وخطة يدوية بديلة، لأن الإنترنت والكهرباء والقنوات قد تتعطل. النظام يخدم عملك، لا يعطّله.
+			</div>
+		</div>
+	</section>
+
+	<section id="who">
+		<div class="wrap">
+			<div class="eyebrow rv">من نخدم</div>
+			<h2 class="rv">مصمَّم لنشاطك اليومي</h2>
+			<p class="section-sub rv">خمس شرائح نبدأ بها، ولكل منها عرض دخول واضح ومسار ترقية مدروس.</p>
+			<div class="segments rv-stagger">
+				<div class="seg">
+					<span class="icon"><Icon name="store" /></span>
+					<h3>متاجر وصيدليات ومطاعم</h3>
+					<p>طلبات ورسائل كثيرة بلا ترتيب، ومخزون يُراجع يدويًا.</p>
+				</div>
+				<div class="seg">
+					<span class="icon"><Icon name="clinic" /></span>
+					<h3>عيادات ومكاتب خدمات</h3>
+					<p>مواعيد متضاربة، متابعة تتأخر، وملفات متفرقة.</p>
+				</div>
+				<div class="seg">
+					<span class="icon"><Icon name="book" /></span>
+					<h3>مدارس ومعاهد خاصة</h3>
+					<p>تسجيل وحضور ورسوم تُتابع يدويًا وتستهلك وقت الإدارة.</p>
+				</div>
+				<div class="seg">
+					<span class="icon"><Icon name="truck" /></span>
+					<h3>توزيع واستيراد</h3>
+					<p>فواتير ورقية وإدخال يدوي، وتقارير تُجمع من عدة ملفات.</p>
+				</div>
+				<div class="seg">
+					<span class="icon"><Icon name="globe" /></span>
+					<h3>وكالات ومشاريع ناشئة</h3>
+					<p>فرق عربية وعالمية تبحث عن بناء أتمتة ووكلاء ذكاء اصطناعي بجودة وسعر معقول.</p>
+				</div>
+			</div>
+			<a class="link-more rv" href="/audiences">تفاصيل كل شريحة وما نقدمه لها ←</a>
+		</div>
+	</section>
+
+	<section id="measure" class="soft">
+		<div class="wrap">
+			<div class="eyebrow rv">النتيجة أولًا</div>
+			<h2 class="rv">نبيع نتيجة تشغيلية، لا أداة</h2>
+			<p class="section-sub rv">كل مشروع يبدأ بأرقام «قبل» من نشاطك، وينتهي بأرقام «بعد» تقيسها بنفسك.</p>
+			<div class="measure rv-stagger">
+				<div class="m">
+					<h3>وقت الرد على العميل</h3>
+					<p>كم دقيقة تستغرق اليوم لترد على رسالة عميل؟ هذا أول رقم نقيسه ونحسّنه.</p>
+				</div>
+				<div class="m">
+					<h3>أخطاء الطلبات والفواتير</h3>
+					<p>طلبات تضيع وفواتير تُدخل يدويًا — نحوّلها إلى سجل آلي تُراجع أخطاؤه.</p>
+				</div>
+				<div class="m">
+					<h3>الساعات الموفَّرة شهريًا</h3>
+					<p>تقرير شهري يوضح وقت فريقك الموفَّر وعدد العمليات الآلية، لتعرف قيمة ما دفعته.</p>
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<section id="roadmap">
 		<div class="wrap">
-			<div class="eyebrow">خارطة الطريق</div>
-			<h2>مراحل خدماتنا</h2>
-			<p class="section-sub">نرتّب التطور مراحل مدروسة بدل أن نعد بكل شيء دفعة واحدة.</p>
-			<div class="cards">
-				<div class="card">
-					<h3>المستويات 1–4 <span class="badge later">مرحلة الإطلاق</span></h3>
-					<p>استقبال العملاء، تنظيم الطلبات والفواتير، التقارير اليومية، ولوحة تحكم بسيطة، مع أولى لمسات الذكاء الاصطناعي: تصنيف واستخراج، ومساعد عربي يجيب من ملفات شركتك.</p>
-				</div>
-				<div class="card">
-					<h3>المستويات المتقدمة <span class="badge later">خارطة طريق</span></h3>
-					<p>معالجة المستندات المتقدمة، أنظمة القطاعات الجاهزة، الوكلاء الأذكياء، والتركيب المحلي والعمل دون إنترنت — مراحل قادمة تُفتح بعد نجاح المرحلة الأولى.</p>
-				</div>
+			<div class="eyebrow rv">خارطة الطريق</div>
+			<h2 class="rv">تسعة مستويات، نبدأ بأربعة</h2>
+			<p class="section-sub rv">نرتّب التطور مراحل مدروسة بدل أن نعد بكل شيء دفعة واحدة، وكل مستوى أعلى يُعلن عند جهوزه فعليًا.</p>
+			<div class="ladder rv" aria-label="مستويات خدمات الأتمتة التسعة">
+				<div class="lvl on"><b>1</b><small>مهمة واحدة</small></div>
+				<div class="lvl on"><b>2</b><small>مسار عمل</small></div>
+				<div class="lvl on"><b>3</b><small>استقبال العملاء</small></div>
+				<div class="lvl on"><b>4</b><small>تكامل وتقارير</small></div>
+				<div class="lvl"><b>5</b><small>أتمتة ذكية</small></div>
+				<div class="lvl"><b>6</b><small>نظام بأتمتة</small></div>
+				<div class="lvl"><b>7</b><small>نظام بأتمتة ذكية</small></div>
+				<div class="lvl"><b>8</b><small>وكلاء ذكاء اصطناعي</small></div>
+				<div class="lvl"><b>9</b><small>أتمتة شاملة</small></div>
 			</div>
-			<div class="roadmap-note">
-				هذه عروض مرحلة الإطلاق في خطتنا، وتُعتمد تفاصيل كل خدمة وشروطها عند التعاقد. وكل مستوى أعلى يُعلن عند جهوزه فعليًا، لا قبل ذلك.
+			<div class="ladder-legend rv">
+				<span><i class="i-on"></i> مرحلة الإطلاق — متاحة الآن</span>
+				<span><i class="i-next"></i> خارطة طريق — تُعلن عند جهوزها</span>
+			</div>
+			<div class="roadmap-note rv">
+				هذه عروض مرحلة الإطلاق في خطتنا، وتُعتمد تفاصيل كل خدمة وشروطها عند التعاقد.
 			</div>
 		</div>
 	</section>
