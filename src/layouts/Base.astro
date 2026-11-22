@@ -9,9 +9,16 @@ const nav = [
 	{ href: '/faq', label: 'الأسئلة الشائعة', key: 'faq' },
 	{ href: '/about', label: 'من نحن', key: 'about' },
 ];
+const languageTarget = ['/privacy', '/terms'].includes(Astro.url.pathname.replace(/\/$/, '')) ? `/en${Astro.url.pathname}` : '/en';
 ---
 <html lang="ar" dir="rtl">
 <head>
+	<script is:inline>
+		try {
+			const saved = localStorage.getItem('onetech-theme');
+			document.documentElement.dataset.theme = saved === 'dark' || saved === 'light' ? saved : 'light';
+		} catch { document.documentElement.dataset.theme = 'light'; }
+	</script>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -53,6 +60,10 @@ const nav = [
 					))}
 				</nav>
 			</details>
+			<div class="site-controls" aria-label="اللغة والمظهر">
+				<nav class="language-switch" aria-label="اللغة" dir="ltr"><span aria-current="true" lang="ar">العربية</span><a href={languageTarget} hreflang="en" lang="en">English</a></nav>
+				<button class="theme-toggle" type="button" data-theme-toggle data-dark="الوضع الداكن" data-light="الوضع المضيء" aria-pressed="false"><span data-theme-icon aria-hidden="true">☾</span><span data-theme-label>الوضع الداكن</span></button>
+			</div>
 		</div>
 	</header>
 
@@ -77,5 +88,25 @@ const nav = [
 			</div>
 		</div>
 	</footer>
+
+	<script is:inline>
+		(() => {
+			const button = document.querySelector('[data-theme-toggle]');
+			if (!button) return;
+			const update = () => {
+				const dark = document.documentElement.dataset.theme === 'dark';
+				button.setAttribute('aria-pressed', String(dark));
+				button.querySelector('[data-theme-label]').textContent = dark ? button.dataset.light : button.dataset.dark;
+				button.querySelector('[data-theme-icon]').textContent = dark ? '☀' : '☾';
+			};
+			button.addEventListener('click', () => {
+				const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+				document.documentElement.dataset.theme = next;
+				try { localStorage.setItem('onetech-theme', next); } catch {}
+				update();
+			});
+			update();
+		})();
+	</script>
 </body>
 </html>
