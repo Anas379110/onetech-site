@@ -1,0 +1,60 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import CtaBand from '../components/CtaBand.astro';
+---
+<Base current="audiences" title="من نخدم — OneTech Solutions" description="نخدم المتاجر والصيدليات والمطاعم، العيادات والمكاتب، المدارس، شركات التوزيع، والعملاء الدوليين.">
+
+	<section class="page-hero">
+		<div class="wrap">
+			<div class="eyebrow">من نخدم</div>
+			<h1>من نخدم</h1>
+			<p>نصمم كل مشروع على مشكلة شريحة بعينها: ما عمليتك اليومية، وأين يضيع وقتك، وما الذي يستحق الأتمتة أولًا.</p>
+		</div>
+	</section>
+
+	<section>
+		<div class="wrap">
+			<h2>شرائح الأولوية في مرحلة الإطلاق</h2>
+			<p class="section-sub">نبدأ حيث المشكلة أوضح والعائد أسرع قياسًا.</p>
+			<div class="cards">
+				<div class="card">
+					<Icon name="store" />
+					<h3>متاجر وصيدليات ومطاعم</h3>
+					<p>طلبات ترد من قنوات متفرقة ورسائل تضيع في الزحام. نبدأ باستقبال العملاء وتنبيهات الطلبات والمخزون.</p>
+				</div>
+				<div class="card">
+					<Icon name="clinic" />
+					<h3>عيادات ومكاتب</h3>
+					<p>مواعيد تُنسى ومتابعات يدوية تستهلك يومك. نبدأ بتنظيم المواعيد والمتابعة التلقائية للمراجعين.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="soft">
+		<div class="wrap">
+			<h2>شرائح تتبع في الخطة</h2>
+			<div class="cards">
+				<div class="card">
+					<Icon name="truck" />
+					<h3>شركات التوزيع</h3>
+					<p>فواتير ورقية وصور واتساب تتحول إلى قيود منظمة، مع تقارير يومية بالحركة.</p>
+				</div>
+				<div class="card">
+					<Icon name="book" />
+					<h3>مدارس ومعاهد</h3>
+					<p>تسجيل الطلاب والحضور والرسوم في مكان واحد، بدل الجداول المتفرقة.</p>
+				</div>
+				<div class="card">
+					<Icon name="globe" />
+					<h3>عملاء دوليون</h3>
+					<p>عبر منصات العمل الحر، بنفس منهجية القياس قبل وبعد.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<CtaBand />
+
+</Base>

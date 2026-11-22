@@ -1,0 +1,5 @@
+/* نظام OneTech البصري للقنوات — مطابق لرموز الموقع */
+:root { --navy:#0F172A; --navy-2:#1E293B; --blue:#2563EB; --blue-dark:#1D4ED8; --blue-light:#60A5FA; --sky:#93C5FD; --white:#FFFFFF; --muted:#94A3B8; --soft:#CBD5E1; --line:#E2E8F0; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:"Tajawal","Segoe UI",Tahoma,sans-serif; direction:rtl; }
+.bar { height:8px; border-radius:4px; background:linear-gradient(90deg,var(--blue) 0%,var(--blue-light) 100%); }

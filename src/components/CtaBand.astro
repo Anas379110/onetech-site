@@ -1,0 +1,21 @@
+---
+// Unified journey-end band: same final step on every page.
+// Channels come from src/config.ts (owner-approved 2026-11-21).
+import { contact } from '../config';
+const active = Boolean(contact.whatsapp || contact.email);
+---
+<section class="cta-band" id="contact">
+	<div class="wrap">
+		<div class="eyebrow light">الخطوة التالية</div>
+		<h2>ابدأ بجلسة اكتشاف مجانية</h2>
+		<p>نصف ساعة نفهم فيها عمليتك اليومية ونخبرك بصراحة إن كانت الأتمتة تناسبك، بلا التزام. وتُعتمد تفاصيل كل خدمة وشروطها عند التعاقد.</p>
+		{active ? (
+			<div class="cta-row">
+				{contact.whatsapp && <a class="cta" href={contact.whatsapp}>تواصل معنا عبر واتساب</a>}
+				{contact.email && <a class="cta-alt" href={`mailto:${contact.email}`}><span dir="ltr">{contact.email}</span></a>}
+			</div>
+		) : (
+			<span class="cta cta-disabled" aria-disabled="true">قناة التواصل الرسمية تُفعَّل هنا بعد اعتمادها من إدارة الشركة</span>
+		)}
+	</div>
+</section>
