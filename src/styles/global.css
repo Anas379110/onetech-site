@@ -22,7 +22,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 84px; }
 body {
   font-family: "Tajawal", "Segoe UI", Tahoma, "Noto Kufi Arabic", "Helvetica Neue", Arial, sans-serif;
   color: var(--ink);
-  background: var(--white);
+  background: var(--surface, var(--white));
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -79,10 +79,10 @@ header.site {
   .nav-menu summary::-webkit-details-marker { display: none; }
   .nav-menu summary:hover { background: rgba(255,255,255,.09); }
   .nav-menu[open] summary { background: rgba(37,99,235,.28); }
-  .burger { position: relative; width: 17px; height: 2px; background: var(--white); border-radius: 2px; }
+  .burger { position: relative; width: 17px; height: 2px; background: var(--surface, var(--white)); border-radius: 2px; }
   .burger::before, .burger::after {
     content: ""; position: absolute; inset-inline-start: 0; width: 17px; height: 2px;
-    background: var(--white); border-radius: 2px;
+    background: var(--surface, var(--white)); border-radius: 2px;
   }
   .burger::before { top: -5.5px; }
   .burger::after { top: 5.5px; }
@@ -170,7 +170,7 @@ h2 { font-size: clamp(1.35rem, 3vw, 1.85rem); color: var(--navy); margin-bottom:
 /* Cards */
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
 .card {
-  background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface, var(--white)); border: 1px solid var(--line); border-radius: var(--radius);
   padding: 26px 22px; box-shadow: var(--shadow-sm);
   transition: transform .18s ease, box-shadow .18s ease;
 }
@@ -217,7 +217,7 @@ h2 { font-size: clamp(1.35rem, 3vw, 1.85rem); color: var(--navy); margin-bottom:
 .card-link { display: inline-block; margin-top: 12px; font-size: .92rem; font-weight: 700; color: var(--blue); text-decoration: none; }
 .card-link:hover { text-decoration: underline; }
 .roadmap-note {
-  margin-top: 24px; background: var(--white); border-inline-start: 4px solid var(--blue);
+  margin-top: 24px; background: var(--surface, var(--white)); border-inline-start: 4px solid var(--blue);
   border-radius: 10px; padding: 16px 20px; color: var(--muted); font-size: .95rem; box-shadow: var(--shadow-sm);
 }
 
@@ -234,7 +234,7 @@ h2 { font-size: clamp(1.35rem, 3vw, 1.85rem); color: var(--navy); margin-bottom:
 /* FAQ accordion */
 .faq-item {
   border: 1px solid var(--line); border-radius: 12px; margin-bottom: 12px;
-  background: var(--white); overflow: hidden; box-shadow: var(--shadow-sm);
+  background: var(--surface, var(--white)); overflow: hidden; box-shadow: var(--shadow-sm);
 }
 .faq-item summary {
   cursor: pointer; list-style: none; padding: 18px 22px;
@@ -319,3 +319,46 @@ footer.site .foot-note { margin-top: 22px; padding-top: 18px; border-top: 1px so
 footer.site .foot-contact { margin-top: 10px; font-size: .86rem; color: #94A3B8; }
 footer.site .foot-contact a { color: #93C5FD; text-decoration: none; }
 footer.site .foot-contact a:hover { color: var(--white); }
+
+/* Language and appearance controls stay visible outside the mobile menu. */
+.site-controls { display:flex; align-items:center; gap:10px; flex-shrink:0; }
+.language-switch { display:flex; align-items:center; padding:3px; gap:2px; border:1px solid #526078; border-radius:10px; }
+.language-switch a, .language-switch span { display:inline-flex; align-items:center; justify-content:center; min-height:38px; padding:4px 9px; color:#E2E8F0; text-decoration:none; font-size:.83rem; font-weight:700; border-radius:7px; }
+.language-switch [aria-current] { background:#334155; color:#fff; }
+.language-switch a:hover { background:#253c60; color:#fff; }
+.theme-toggle { display:inline-flex; align-items:center; justify-content:center; gap:7px; min-height:46px; padding:6px 11px; color:#F8FAFC; background:transparent; border:1px solid #526078; border-radius:10px; font:inherit; font-size:.83rem; font-weight:700; cursor:pointer; white-space:nowrap; }
+.theme-toggle:hover { background:#253c60; }
+[data-theme-icon] { font-size:1.25rem; line-height:1; }
+@media(min-width:721px) and (max-width:1150px) { .main-nav { display:none; } .nav-menu { display:block; } .nav-menu summary { cursor:pointer; min-height:44px; padding:8px; } .menu-nav { position:absolute; background:#0F172A; display:flex; flex-direction:column; padding:12px; border-radius:10px; } .menu-nav a { color:#E2E8F0; padding:8px; text-decoration:none; } }
+@media(min-width:1151px) { .main-nav a { padding-inline:9px; font-size:.88rem; } .header-row { gap:12px; } }
+@media(max-width:620px) {
+ .header-row { flex-wrap:wrap; gap:8px; }
+ .brand-link { flex:1; min-width:0; }
+ .brand { font-size:1rem; }
+ .brand small { font-size:.64rem; letter-spacing:.02em; }
+ .nav-menu summary { padding-inline:11px; }
+ .site-controls { width:100%; justify-content:space-between; padding-top:8px; border-top:1px solid #334155; }
+ .language-switch a, .language-switch span { min-height:38px; padding-inline:14px; }
+ .theme-toggle { min-height:46px; padding-inline:14px; }
+ html { scroll-padding-top:150px; }
+}
+/* Keep brand/hero colors stable while giving content its own dark surfaces. */
+html[data-theme="light"] { color-scheme:light; }
+html[data-theme="dark"] { color-scheme:dark; --surface:#0F172A; --bg-soft:#162236; --ink:#E2E8F0; --muted:#BBC8DC; --line:#334155; --blue-soft:#172F50; }
+html[data-theme="dark"] body { background:#0F172A; }
+html[data-theme="dark"] h2, html[data-theme="dark"] .card h3, html[data-theme="dark"] .steps b, html[data-theme="dark"] .faq-item summary { color:#E2E8F0; }
+html[data-theme="dark"] .card-link, html[data-theme="dark"] .eyebrow { color:#93C5FD; }
+html[data-theme="dark"] .card .icon { color:#93C5FD; }
+html[data-theme="dark"] .badge { background:#1E3A5F; color:#BFDBFE; }
+html[data-theme="dark"] .disc-form h2, html[data-theme="dark"] .disc-form label { color:#E2E8F0; }
+html[data-theme="dark"] .disc-form input, html[data-theme="dark"] .disc-form select, html[data-theme="dark"] .disc-form textarea { color:#E2E8F0; background:#162236; border-color:#475569; }
+html[data-theme="dark"] .disc-copy-btn { border-color:#64748B; }
+html[data-theme="dark"] .roadmap-note { border-inline-start-color:#60A5FA; }
+@media(max-width:360px) {
+ .site-controls { gap:6px; }
+ .language-switch a, .language-switch span { padding-inline:8px; font-size:.78rem; }
+ .theme-toggle { padding-inline:8px; font-size:.78rem; gap:5px; }
+}
+/* ID specificity keeps scoped form styles readable in dark mode. */
+html[data-theme="dark"] #discovery-form h2, html[data-theme="dark"] #discovery-form label { color:#E2E8F0; }
+html[data-theme="dark"] #discovery-form input, html[data-theme="dark"] #discovery-form select, html[data-theme="dark"] #discovery-form textarea { color:#E2E8F0; background:#162236; border-color:#64748B; }
