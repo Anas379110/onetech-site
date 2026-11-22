@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import '../styles/v6.css';
 interface Props { title: string; description: string; current?: string; }
 const { title, description, current = '' } = Astro.props;
 const nav = [
@@ -18,6 +19,10 @@ const languageTarget = ['/privacy', '/terms'].includes(Astro.url.pathname.replac
 			const saved = localStorage.getItem('onetech-theme');
 			document.documentElement.dataset.theme = saved === 'dark' || saved === 'light' ? saved : 'light';
 		} catch { document.documentElement.dataset.theme = 'light'; }
+		try {
+			const look = new URLSearchParams(location.search).get('look');
+			if (look === 'dark' || look === 'light' || look === 'hybrid') document.documentElement.dataset.look = look;
+		} catch {}
 	</script>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -61,7 +66,7 @@ const languageTarget = ['/privacy', '/terms'].includes(Astro.url.pathname.replac
 				</nav>
 			</details>
 			<div class="site-controls" aria-label="اللغة والمظهر">
-				<nav class="language-switch" aria-label="اللغة" dir="ltr"><span aria-current="true" lang="ar">العربية</span><a href={languageTarget} hreflang="en" lang="en">English</a></nav>
+			<nav class="language-switch" aria-label="اللغة" dir="ltr"><span aria-current="true" lang="ar">العربية</span><a href={languageTarget} hreflang="en" lang="en">English</a></nav>
 				<button class="theme-toggle" type="button" data-theme-toggle data-dark="الوضع الداكن" data-light="الوضع المضيء" aria-pressed="false"><span data-theme-icon aria-hidden="true">☾</span><span data-theme-label>الوضع الداكن</span></button>
 			</div>
 		</div>
@@ -92,6 +97,17 @@ const languageTarget = ['/privacy', '/terms'].includes(Astro.url.pathname.replac
 
 	<script is:inline>
 		(() => {
+			const els = document.querySelectorAll('.rv, .rv-stagger');
+			if (!('IntersectionObserver' in window) || !els.length) {
+				els.forEach((el) => el.classList.add('in'));
+			} else {
+				const io = new IntersectionObserver((entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
+					});
+				}, { threshold: 0.12 });
+				els.forEach((el) => io.observe(el));
+			}
 			const button = document.querySelector('[data-theme-toggle]');
 			if (!button) return;
 			const update = () => {
@@ -111,4 +127,5 @@ const languageTarget = ['/privacy', '/terms'].includes(Astro.url.pathname.replac
 	</script>
 </body>
 </html>
+
 
