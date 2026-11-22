@@ -2,5 +2,5 @@
 // التعديل من هنا فقط ينعكس على شريط «الخطوة التالية» في الصفحات الخمس وعلى التذييل.
 export const contact = {
 	whatsapp: 'https://wa.me/963995263075', // +963 99 526 3075 (طبّعة دولية من 00963995263075)
-	email: 'homsi434q@gmail.com',
+	email: 'onetechmena@proton.me',
 };
