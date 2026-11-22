@@ -37,7 +37,7 @@ const nav = [
 				<img src="/ots-logo.png" alt="شعار OneTech Solutions" width="42" height="42" />
 				<div class="brand">
 					OneTech Solutions
-					<small>Innovate • Develop • Solve</small>
+					<small>ون تك • Innovate • Develop • Solve</small>
 				</div>
 			</a>
 			<nav class="main-nav" aria-label="التنقل الرئيسي">
@@ -70,9 +70,11 @@ const nav = [
 				</div>
 				<nav class="foot-nav" aria-label="روابط التذييل">
 					{nav.map((item) => <a href={item.href}>{item.label}</a>)}
+					<a href="/privacy">سياسة الخصوصية</a>
+					<a href="/terms">الشروط</a>
+					<a href="/en" hreflang="en">English</a>
 				</nav>
 			</div>
-			<div class="foot-note">نموذج أولي للمراجعة — لم يُنشر بعد.</div>
 		</div>
 	</footer>
 </body>
