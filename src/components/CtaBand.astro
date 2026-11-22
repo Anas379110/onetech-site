@@ -11,7 +11,8 @@ const active = Boolean(contact.whatsapp || contact.email);
 		<p>نصف ساعة نفهم فيها عمليتك اليومية ونخبرك بصراحة إن كانت الأتمتة تناسبك، بلا التزام. وتُعتمد تفاصيل كل خدمة وشروطها عند التعاقد.</p>
 		{active ? (
 			<div class="cta-row">
-				{contact.whatsapp && <a class="cta" href={contact.whatsapp}>تواصل معنا عبر واتساب</a>}
+				<a class="cta" href="/discovery">عبّئ نموذج طلب الجلسة</a>
+				{contact.whatsapp && <a class="cta-alt" href={contact.whatsapp}>أو راسلنا مباشرة على واتساب</a>}
 				{contact.email && <a class="cta-alt" href={`mailto:${contact.email}`}><span dir="ltr">{contact.email}</span></a>}
 			</div>
 		) : (
