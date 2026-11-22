@@ -3,6 +3,120 @@ import '../styles/global.css';
 interface Props { title: string; description: string; current?: string; }
 const { title, description, current = '' } = Astro.props;
 const nav = [
+	{ href: '/', label: 'الرئيسية', key: 'home' },
+	{ href: '/services', label: 'الخدمات', key: 'services' },
+	{ href: '/audiences', label: 'من نخدم', key: 'audiences' },
+	{ href: '/faq', label: 'الأسئلة الشائعة', key: 'faq' },
+	{ href: '/about', label: 'من نحن', key: 'about' },
+];
+const languageTarget = ['/privacy', '/terms'].includes(Astro.url.pathname.replace(/\/$/, '')) ? `/en${Astro.url.pathname}` : '/en';
+---
+<html lang="ar" dir="rtl">
+<head>
+	<script is:inline>
+		try {
+			const saved = localStorage.getItem('onetech-theme');
+			document.documentElement.dataset.theme = saved === 'dark' || saved === 'light' ? saved : 'light';
+		} catch { document.documentElement.dataset.theme = 'light'; }
+	</script>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="referrer" content="strict-origin-when-cross-origin" />
+	<link rel="icon" type="image/png" href="/ots-logo.png" />
+	<title>{title}</title>
+	<meta name="description" content={description} />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:image" content="/og-image.png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	<meta property="og:locale" content="ar_AR" />
+	<meta name="theme-color" content="#0F172A" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" />
+</head>
+<body>
+	<a class="skip-link" href="#main-content">تخطَّ إلى المحتوى</a>
+	<header class="site">
+		<div class="wrap header-row">
+			<a class="brand-link" href="/">
+				<img src="/ots-logo.png" alt="شعار OneTech Solutions" width="42" height="42" />
+				<div class="brand">
+					OneTech Solutions
+					<small><span class="brand-ar">ون تك</span> <bdi dir="ltr">Innovate • Develop • Solve</bdi></small>
+				</div>
+			</a>
+			<nav class="main-nav" aria-label="التنقل الرئيسي">
+				{nav.map((item) => (
+					<a href={item.href} aria-current={current === item.key ? 'page' : undefined}>{item.label}</a>
+				))}
+			</nav>
+			<details class="nav-menu">
+				<summary aria-label="فتح قائمة التنقل"><span class="burger" aria-hidden="true"></span><span class="menu-word">القائمة</span></summary>
+				<nav class="menu-nav" aria-label="قائمة التنقل للجوال">
+					{nav.map((item) => (
+						<a href={item.href} aria-current={current === item.key ? 'page' : undefined}>{item.label}</a>
+					))}
+				</nav>
+			</details>
+			<div class="site-controls" aria-label="اللغة والمظهر">
+				<nav class="language-switch" aria-label="اللغة" dir="ltr"><span aria-current="true" lang="ar">العربية</span><a href={languageTarget} hreflang="en" lang="en">English</a></nav>
+				<button class="theme-toggle" type="button" data-theme-toggle data-dark="الوضع الداكن" data-light="الوضع المضيء" aria-pressed="false"><span data-theme-icon aria-hidden="true">☾</span><span data-theme-label>الوضع الداكن</span></button>
+			</div>
+		</div>
+	</header>
+
+	<main id="main-content" tabindex="-1">
+		<slot />
+	</main>
+
+	<footer class="site">
+		<div class="wrap">
+			<div class="footer-row">
+				<div>
+					<b>OneTech Solutions</b> — أنظمة أتمتة وذكاء اصطناعي تعمل بالعربية
+					<div class="slogan">Innovate • Develop • Solve</div>
+					<div class="foot-contact">تواصل: <a href="https://wa.me/963995263075">واتساب</a> · <a href="mailto:onetechmena@proton.me"><span dir="ltr">onetechmena@proton.me</span></a></div>
+					<nav class="foot-contact" aria-label="روابط التواصل"><a href="https://www.youtube.com/@OneTechMENA">YouTube</a> · <a href="https://t.me/OneTechMENA">Telegram</a> · <a href="https://www.linkedin.com/company/onetechmena/">LinkedIn</a> · <a href="https://www.facebook.com/61596958526046/">Facebook</a> · <a href="https://www.instagram.com/anas379110alhomsi">Instagram</a> · <a href="https://www.snapchat.com/@feminset">Snapchat</a></nav>
+				</div>
+				<nav class="foot-nav" aria-label="روابط التذييل">
+					{nav.map((item) => <a href={item.href}>{item.label}</a>)}
+					<a href="/privacy">سياسة الخصوصية</a>
+					<a href="/terms">الشروط</a>
+					<a href="/en" hreflang="en">English</a>
+				</nav>
+			</div>
+		</div>
+	</footer>
+
+	<script is:inline>
+		(() => {
+			const button = document.querySelector('[data-theme-toggle]');
+			if (!button) return;
+			const update = () => {
+				const dark = document.documentElement.dataset.theme === 'dark';
+				button.setAttribute('aria-pressed', String(dark));
+				button.querySelector('[data-theme-label]').textContent = dark ? button.dataset.light : button.dataset.dark;
+				button.querySelector('[data-theme-icon]').textContent = dark ? '☀' : '☾';
+			};
+			button.addEventListener('click', () => {
+				const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+				document.documentElement.dataset.theme = next;
+				try { localStorage.setItem('onetech-theme', next); } catch {}
+				update();
+			});
+			update();
+		})();
+	</script>
+</body>
+</html>
+
+---
+import '../styles/global.css';
+interface Props { title: string; description: string; current?: string; }
+const { title, description, current = '' } = Astro.props;
+const nav = [
 	{ href: '/', label: 'Ø§ÙØ±Ø¦ÙØ³ÙØ©', key: 'home' },
 	{ href: '/services', label: 'Ø§ÙØ®Ø¯ÙØ§Øª', key: 'services' },
 	{ href: '/audiences', label: 'ÙÙ ÙØ®Ø¯Ù', key: 'audiences' },
