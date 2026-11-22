@@ -5,7 +5,7 @@ import Base from '../layouts/Base.astro';
 
 	<section class="page-hero">
 		<div class="wrap">
-			<div class="eyebrow">جلسة اكتشاف مجانية</div>
+			<div class="eyebrow rv">جلسة اكتشاف مجانية</div>
 			<h1>اطلب جلسة الاكتشاف</h1>
 			<p>عبّئ ما تعرفه من إجابات، وسيُفتح واتساب برسالة جاهزة تحمل طلبك — تراجعها ثم ترسلها بنفسك. نصف ساعة نفهم فيها عمليتك، بلا التزام.</p>
 		</div>
@@ -14,7 +14,7 @@ import Base from '../layouts/Base.astro';
 	<section>
 		<div class="wrap">
 			<form id="discovery-form" class="disc-form">
-				<h2>عنك وعن نشاطك</h2>
+				<h2 class="rv">عنك وعن نشاطك</h2>
 				<label>الاسم
 					<input type="text" name="name" autocomplete="name" required />
 				</label>
@@ -42,7 +42,7 @@ import Base from '../layouts/Base.astro';
 					</select>
 				</label>
 
-				<h2>عمليتك اليومية</h2>
+				<h2 class="rv">عمليتك اليومية</h2>
 				<label>ما أهم ثلاث مشاكل تأخذ وقتكم أو تكلفكم مالًا اليوم؟
 					<textarea name="problems" rows="3" maxlength="300"></textarea>
 				</label>
@@ -50,7 +50,7 @@ import Base from '../layouts/Base.astro';
 					<textarea name="tools" rows="2" maxlength="300"></textarea>
 				</label>
 
-				<h2>خمسة أسئلة تساعدنا نقدّر الحجم</h2>
+				<h2 class="rv">خمسة أسئلة تساعدنا نقدّر الحجم</h2>
 				<p class="disc-hint">اختر الأقرب لواقعك في كل سؤال. لا توجد إجابة خاطئة — الإجابة الصريحة توفر علينا كلنا وقتًا.</p>
 				<label>كم نظامًا أو أداة تريد ربطها؟
 					<select name="s1">
@@ -163,3 +163,4 @@ document.getElementById('discovery-form')?.addEventListener('submit', (e) => {
 	.disc-copy-btn:hover { background: rgba(15,23,42,.06); }
 	.disc-form .cta { border: none; cursor: pointer; font: inherit; font-weight: 800; margin-top: 10px; }
 </style>
+
