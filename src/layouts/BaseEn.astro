@@ -1,0 +1,78 @@
+---
+import '../styles/global.css';
+interface Props { title: string; description: string; }
+const { title, description } = Astro.props;
+---
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="referrer" content="strict-origin-when-cross-origin" />
+	<link rel="icon" type="image/png" href="/ots-logo.png" />
+	<title>{title}</title>
+	<meta name="description" content={description} />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:image" content="/og-image.png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	<meta property="og:locale" content="en_US" />
+	<meta name="theme-color" content="#0F172A" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" />
+</head>
+<body>
+	<a class="skip-link" href="#main-content">Skip to content</a>
+	<header class="site">
+		<div class="wrap header-row">
+			<a class="brand-link" href="/en">
+				<img src="/ots-logo.png" alt="OneTech Solutions logo" width="42" height="42" />
+				<div class="brand">
+					OneTech Solutions
+					<small>Innovate • Develop • Solve</small>
+				</div>
+			</a>
+			<nav class="main-nav" aria-label="Main navigation">
+				<a href="/en">Home</a>
+				<a href="/en#offers">Services</a>
+				<a href="/en#method">Method</a>
+				<a href="/" hreflang="ar">العربية</a>
+			</nav>
+			<details class="nav-menu">
+				<summary aria-label="Open navigation menu"><span class="burger" aria-hidden="true"></span><span class="menu-word">Menu</span></summary>
+				<nav class="menu-nav" aria-label="Mobile navigation">
+					<a href="/en">Home</a>
+					<a href="/en#offers">Services</a>
+					<a href="/en#method">Method</a>
+					<a href="/" hreflang="ar">العربية</a>
+				</nav>
+			</details>
+		</div>
+	</header>
+
+	<main id="main-content" tabindex="-1">
+		<slot />
+	</main>
+
+	<footer class="site">
+		<div class="wrap">
+			<div class="footer-row">
+				<div>
+					<b>OneTech Solutions</b> — automation and AI systems that work in Arabic and English
+					<div class="slogan">Innovate • Develop • Solve</div>
+					<div class="foot-contact">Contact: <a href="https://wa.me/963995263075">WhatsApp</a> · <a href="mailto:homsi434q@gmail.com"><span dir="ltr">homsi434q@gmail.com</span></a></div>
+				</div>
+				<nav class="foot-nav" aria-label="Footer links">
+					<a href="/en">Home</a>
+					<a href="/en#offers">Services</a>
+					<a href="/en#method">Method</a>
+					<a href="/en/privacy">Privacy</a>
+					<a href="/en/terms">Terms</a>
+					<a href="/" hreflang="ar">العربية</a>
+				</nav>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
