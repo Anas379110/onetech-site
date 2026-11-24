@@ -10,7 +10,7 @@ const nav = [
 	{ href: '/faq', label: 'الأسئلة الشائعة', key: 'faq' },
 	{ href: '/about', label: 'من نحن', key: 'about' },
 ];
-const languageTarget = ['/privacy', '/terms'].includes(Astro.url.pathname.replace(/\/$/, '')) ? `/en${Astro.url.pathname}` : '/en';
+const languageTarget = ['/privacy', '/terms', '/links'].includes(Astro.url.pathname.replace(/\/$/, '')) ? `/en${Astro.url.pathname}` : '/en';
 ---
 <html lang="ar" dir="rtl">
 <head>
@@ -67,7 +67,7 @@ const languageTarget = ['/privacy', '/terms'].includes(Astro.url.pathname.replac
 			</details>
 			<div class="site-controls" aria-label="اللغة والمظهر">
 			<nav class="language-switch" aria-label="اللغة" dir="ltr"><span aria-current="true" lang="ar">العربية</span><a href={languageTarget} hreflang="en" lang="en">English</a></nav>
-				<button class="theme-toggle" type="button" data-theme-toggle data-dark="الوضع الداكن" data-light="الوضع المضيء" aria-pressed="false"><span data-theme-icon aria-hidden="true">☾</span><span data-theme-label>الوضع الداكن</span></button>
+				<button class="theme-toggle" type="button" data-theme-toggle data-dark="الوضع الداكن" data-light="الوضع المضيء" aria-pressed="false"><span data-theme-icon aria-hidden="true">☾</span><span class="sr-only" data-theme-label>الوضع الداكن</span></button>
 			</div>
 		</div>
 	</header>
@@ -83,7 +83,8 @@ const languageTarget = ['/privacy', '/terms'].includes(Astro.url.pathname.replac
 					<b>OneTech Solutions</b> — أنظمة أتمتة وذكاء اصطناعي تعمل بالعربية
 					<div class="slogan">Innovate • Develop • Solve</div>
 					<div class="foot-contact">تواصل: <a href="https://wa.me/963995263075">واتساب</a> · <a href="mailto:onetechmena@proton.me"><span dir="ltr">onetechmena@proton.me</span></a></div>
-					<nav class="foot-contact" aria-label="روابط التواصل"><a href="https://www.youtube.com/@OneTechMENA">YouTube</a> · <a href="https://t.me/OneTechMENA">Telegram</a> · <a href="https://t.me/OneTechMENADemoBot">نموذج الأتمتة التجريبي</a> · <a href="https://www.linkedin.com/company/onetechmena/">LinkedIn</a> · <a href="https://www.facebook.com/61596958526046/">Facebook</a> · <a href="https://www.instagram.com/onetechmena/">Instagram</a> · <a href="https://www.snapchat.com/@onetechmena">Snapchat</a> · <a href="https://www.tiktok.com/@onetechmena?lang=en">TikTok</a></nav>
+					<nav class="foot-social" aria-label="روابط التواصل"><a href="https://www.youtube.com/@OneTechMENA" rel="noopener">YouTube</a><a href="https://t.me/OneTechMENA" rel="noopener">Telegram</a><a href="https://t.me/OneTechMENADemoBot" rel="noopener">نموذج الأتمتة التجريبي</a><a href="https://www.linkedin.com/company/onetechmena/" rel="noopener">LinkedIn</a><a href="https://www.facebook.com/61596958526046/" rel="noopener">Facebook</a><a href="https://www.instagram.com/onetechmena/" rel="noopener">Instagram</a><a href="https://www.snapchat.com/@onetechmena" rel="noopener">Snapchat</a><a href="https://www.tiktok.com/@onetechmena?lang=en" rel="noopener">TikTok</a></nav>
+					<a class="foot-all" href="/links">كل الروابط ووصف كل منها ←</a>
 				</div>
 				<nav class="foot-nav" aria-label="روابط التذييل">
 					{nav.map((item) => <a href={item.href}>{item.label}</a>)}
@@ -123,6 +124,16 @@ const languageTarget = ['/privacy', '/terms'].includes(Astro.url.pathname.replac
 				update();
 			});
 			update();
+		})();
+	</script>
+	<script is:inline>
+		(() => {
+			const menu = document.querySelector('.nav-menu');
+			if (!menu) return;
+			const close = () => { if (menu.hasAttribute('open')) menu.removeAttribute('open'); };
+			document.addEventListener('click', (e) => { if (!menu.contains(e.target)) close(); });
+			document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && menu.hasAttribute('open')) { close(); menu.querySelector('summary')?.focus(); } });
+			menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', close));
 		})();
 	</script>
 </body>
