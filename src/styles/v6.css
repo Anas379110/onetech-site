@@ -16,7 +16,7 @@
   --ease-out: cubic-bezier(.22, .8, .32, 1);
   --dark-1: #0B0A08;
   --dark-2: #16130E;
-  --header-bg: rgba(250, 248, 243, .88);
+  --header-bg: rgba(250, 248, 243, .96);
   --header-ink: #191613;
   --header-ink-2: #4A453C;
   --header-line: #E7E0D2;
@@ -88,10 +88,30 @@ html[dir="rtl"] .menu-nav a[aria-current="page"] { box-shadow: inset -3px 0 0 va
   .theme-toggle { min-height: 36px; min-width: 36px; width: 36px; }
 }
 
+/* dark theme: header, controls and menu go dark too */
+html[data-theme="dark"] {
+  --header-bg: rgba(17, 15, 11, .95);
+  --header-ink: #F0EBE0;
+  --header-ink-2: #C7BEAF;
+  --header-line: #2E2A21;
+  --header-hover: rgba(245, 242, 234, .08);
+  --menu-bg: #1B1813;
+}
+html[data-theme="dark"] header.site .brand small { color: #9C937F; }
+html[data-theme="dark"] .main-nav a[aria-current="page"] { color: #93C5FD; background: rgba(96, 165, 250, .14); }
+html[data-theme="dark"] .language-switch { border-color: #3A352B; }
+html[data-theme="dark"] .language-switch [aria-current] { background: #F0EBE0; color: #191613; }
+html[data-theme="dark"] .language-switch a:hover { color: #F0EBE0; }
+html[data-theme="dark"] .theme-toggle { border-color: #3A352B; color: #C7BEAF; }
+html[data-theme="dark"] .nav-menu summary { border-color: #3A352B !important; color: #F0EBE0; }
+html[data-theme="dark"] .nav-menu .burger, html[data-theme="dark"] .nav-menu .burger::before, html[data-theme="dark"] .nav-menu .burger::after { background: #F0EBE0; }
+html[data-theme="dark"] .nav-menu[open] .burger { background: transparent; }
+html[data-theme="dark"] .menu-nav a[aria-current="page"] { color: #93C5FD !important; }
+
 /* ---------- hero v7: near-black, huge Almarai headline, pill CTAs ---------- */
 .hero6 {
   position: relative; overflow: hidden; color: #F5F2EA;
-  padding: 108px 0 100px;
+  padding: 76px 0 72px;
   background:
     radial-gradient(52% 62% at 82% 6%, rgba(37, 99, 235, .32) 0%, rgba(37, 99, 235, 0) 62%),
     radial-gradient(42% 48% at 6% 92%, rgba(96, 165, 250, .13) 0%, rgba(96, 165, 250, 0) 65%),
@@ -110,21 +130,21 @@ html[dir="rtl"] .menu-nav a[aria-current="page"] { box-shadow: inset -3px 0 0 va
 @media (max-width: 980px) { .hero6-grid { grid-template-columns: 1fr; gap: 48px; } }
 
 .hero6 .eyebrow {
-  color: #CFE0FA; font-size: .85rem; margin-bottom: 20px;
+  color: #CFE0FA; font-size: .85rem; margin-bottom: 16px;
   border: 1px solid rgba(147, 197, 253, .3); border-radius: 999px; padding: 8px 18px;
 }
 .hero6 .eyebrow::before { background: #60A5FA; }
 .hero6 h1 {
-  font-size: clamp(2.05rem, 5vw, 3.35rem); font-weight: 800; line-height: 1.42; max-width: 24ch;
+  font-size: clamp(1.85rem, 4.1vw, 2.7rem); font-weight: 800; line-height: 1.4; max-width: 26ch;
 }
 .hero6 h1 .grad {
   background: var(--grad-text); -webkit-background-clip: text; background-clip: text; color: transparent;
 }
-.hero6 .lead { margin-top: 22px; color: #C4BDB0; max-width: 58ch; font-size: 1.08rem; line-height: 1.9; }
-.hero6 .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 34px; align-items: center; }
+.hero6 .lead { margin-top: 16px; color: #C4BDB0; max-width: 58ch; font-size: 1.05rem; line-height: 1.85; }
+.hero6 .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 26px; align-items: center; }
 .hero6 .hero-ctas .cta { margin-top: 0; }
 .hero6 .trust-row {
-  display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 28px;
+  display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 22px;
   color: #968E80; font-size: .88rem; font-weight: 500;
 }
 .hero6 .trust-row span { display: inline-flex; align-items: center; gap: 8px; }
