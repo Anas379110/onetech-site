@@ -3,12 +3,12 @@ import BaseEn from '../../layouts/BaseEn.astro';
 ---
 <BaseEn title="OneTech Solutions links — website, contact and all our pages" description="OneTech Solutions builds Arabic-first automation and AI systems. Website, phone, email and every company page, with what each link is for.">
 	<style>
-	.links-list{list-style:none;padding:0;margin:0;display:grid;gap:12px;max-width:640px}
+	.links-list{list-style:none;padding:0;margin:0;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));max-width:980px}
 	.links-list a{display:block;padding:14px 18px;border:1px solid color-mix(in srgb,currentColor 22%,transparent);border-radius:14px;text-decoration:none;color:inherit}
 	.links-list a:hover,.links-list a:focus-visible{border-color:currentColor}
 	.links-list b{display:block;font-size:1.05rem}
 	.links-list small{display:block;opacity:.8;margin-top:4px}
-	.links-contact{display:grid;gap:12px;max-width:640px;margin-top:20px}
+	.links-contact{margin-top:22px}
 </style>
 	<section class="page-hero">
 		<div class="wrap">
@@ -36,7 +36,6 @@ import BaseEn from '../../layouts/BaseEn.astro';
 				<li><a href="https://www.snapchat.com/@onetechmena" rel="noopener"><b>Snapchat <bdi dir="ltr">@onetechmena</bdi></b><small>OneTech on Snapchat.</small></a></li>
 				<li><a href="https://www.whatsapp.com/channel/0029Vb9IO9z60eBfYSQGn60I" rel="noopener"><b>WhatsApp channel <bdi dir="ltr">OneTech</bdi></b><small>Company updates on WhatsApp.</small></a></li>
 			</ul>
-			<p><a href="/links" hreflang="ar">العربية</a></p>
 		</div>
 	</section>
 </BaseEn>
