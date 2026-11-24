@@ -140,6 +140,9 @@ html[data-theme="dark"] .menu-nav a[aria-current="page"] { color: #93C5FD !impor
 .hero6 h1 .grad {
   background: var(--grad-text); -webkit-background-clip: text; background-clip: text; color: transparent;
 }
+/* Latin headline runs longer; tighter size/leading keeps the CTA above the fold at 720px */
+html[dir="ltr"] .hero6 h1 { font-size: clamp(1.75rem, 3.4vw, 2.45rem); line-height: 1.25; letter-spacing: -.01em; }
+html[dir="ltr"] .hero6 .lead { margin-top: 14px; line-height: 1.7; }
 .hero6 .lead { margin-top: 16px; color: #C4BDB0; max-width: 58ch; font-size: 1.05rem; line-height: 1.85; }
 .hero6 .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 26px; align-items: center; }
 .hero6 .hero-ctas .cta { margin-top: 0; }
