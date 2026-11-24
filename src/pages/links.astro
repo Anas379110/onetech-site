@@ -3,12 +3,12 @@ import Base from '../layouts/Base.astro';
 ---
 <Base current="" title="روابط OneTech Solutions — الموقع والتواصل وكل صفحاتنا" description="OneTech Solutions: أنظمة أتمتة وذكاء اصطناعي تعمل بالعربية. الموقع والهاتف والبريد وجميع صفحات الشركة مع وصف كل رابط.">
 	<style>
-	.links-list{list-style:none;padding:0;margin:0;display:grid;gap:12px;max-width:640px}
+	.links-list{list-style:none;padding:0;margin:0;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));max-width:980px}
 	.links-list a{display:block;padding:14px 18px;border:1px solid color-mix(in srgb,currentColor 22%,transparent);border-radius:14px;text-decoration:none;color:inherit}
 	.links-list a:hover,.links-list a:focus-visible{border-color:currentColor}
 	.links-list b{display:block;font-size:1.05rem}
 	.links-list small{display:block;opacity:.8;margin-top:4px}
-	.links-contact{display:grid;gap:12px;max-width:640px;margin-top:20px}
+	.links-contact{margin-top:22px}
 </style>
 	<section class="page-hero">
 		<div class="wrap">
@@ -36,7 +36,6 @@ import Base from '../layouts/Base.astro';
 				<li><a href="https://www.snapchat.com/@onetechmena" rel="noopener"><b>Snapchat <bdi dir="ltr">@onetechmena</bdi></b><small>حساب OneTech على Snapchat.</small></a></li>
 				<li><a href="https://www.whatsapp.com/channel/0029Vb9IO9z60eBfYSQGn60I" rel="noopener"><b>قناة واتساب <bdi dir="ltr">OneTech</bdi></b><small>تحديثات الشركة على واتساب.</small></a></li>
 			</ul>
-			<p><a href="/en/links" hreflang="en">English</a></p>
 		</div>
 	</section>
 </Base>
