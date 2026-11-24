@@ -1,11 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
 const videos = [
-	{ file: 'onetech-diagnosis', title: 'هل تحتاج شركتك فعلاً إلى أتمتة؟', note: 'ثلاثة أسئلة بسيطة تجيبك.' },
-	{ file: 'onetech-method', title: 'كيف نبني أتمتة لشركة صغيرة', note: 'خطوات عمل مقترحة بلا وعود جاهزة.' },
+	{ file: 'onetech-diagnosis', title: 'هل تحتاج شركتك فعلاً إلى أتمتة', note: 'ثلاثة أسئلة بسيطة تجيبك' },
+	{ file: 'onetech-method', title: 'كيف نبني أتمتة لشركة صغيرة', note: 'خطوات عمل مقترحة بلا وعود جاهزة' },
 ];
 ---
-<Base current="" title="فيديوهات OneTech Solutions — أفكار أتمتة قصيرة" description="فيديوهات قصيرة من OneTech Solutions عن الأتمتة والذكاء الاصطناعي بالعربية. محاكاة توضيحية وليست نتائج عملاء.">
+<Base current="" title="فيديوهات OneTech Solutions — أفكار أتمتة قصيرة" description="فيديوهات قصيرة من OneTech Solutions عن الأتمتة والذكاء الاصطناعي بالعربية محاكاة توضيحية وليست نتائج عملاء">
 	<style>
 	.vid-grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),320px));justify-content:start}
 	.vid-card{border:1px solid color-mix(in srgb,currentColor 22%,transparent);border-radius:14px;padding:12px}
@@ -17,7 +17,7 @@ const videos = [
 		<div class="wrap">
 			<div class="eyebrow rv">فيديوهات OneTech</div>
 			<h1>أفكار أتمتة في أقل من دقيقة</h1>
-			<p>فيديوهات قصيرة بالعربية. هي محاكاة توضيحية، وليست نتائج عملاء حقيقيين.</p>
+			<p>فيديوهات قصيرة بالعربية<br />محاكاة توضيحية وليست نتائج عملاء حقيقيين</p>
 		</div>
 	</section>
 	<section>
@@ -27,7 +27,7 @@ const videos = [
 					<article class="vid-card">
 						<video controls playsinline preload="none" poster={`/videos/${v.file}.jpg`} width="540" height="960">
 							<source src={`/videos/${v.file}.mp4`} type="video/mp4" />
-							متصفحك لا يدعم تشغيل الفيديو.
+							متصفحك لا يدعم تشغيل الفيديو
 						</video>
 						<h2>{v.title}</h2>
 						<p>{v.note}</p>
