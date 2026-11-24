@@ -1,29 +1,42 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base current="" title="روابط OneTech Solutions — كل صفحاتنا في مكان واحد" description="موقع OneTech Solutions ورقمها وبريدها وجميع صفحاتها على منصات التواصل في صفحة واحدة.">
+<Base current="" title="روابط OneTech Solutions — الموقع والتواصل وكل صفحاتنا" description="OneTech Solutions: أنظمة أتمتة وذكاء اصطناعي تعمل بالعربية. الموقع والهاتف والبريد وجميع صفحات الشركة مع وصف كل رابط.">
+	<style>
+	.links-list{list-style:none;padding:0;margin:0;display:grid;gap:12px;max-width:640px}
+	.links-list a{display:block;padding:14px 18px;border:1px solid color-mix(in srgb,currentColor 22%,transparent);border-radius:14px;text-decoration:none;color:inherit}
+	.links-list a:hover,.links-list a:focus-visible{border-color:currentColor}
+	.links-list b{display:block;font-size:1.05rem}
+	.links-list small{display:block;opacity:.8;margin-top:4px}
+	.links-contact{display:grid;gap:12px;max-width:640px;margin-top:20px}
+</style>
 	<section class="page-hero">
 		<div class="wrap">
-			<div class="eyebrow rv">روابط التواصل</div>
+			<div class="eyebrow rv">روابط OneTech</div>
 			<h1>OneTech Solutions في مكان واحد</h1>
-			<p>كل قنواتنا وصفحاتنا الرسمية هنا. للتواصل المباشر استخدموا الواتساب أو البريد.</p>
-			<p><a class="btn" href="https://wa.me/963995263075">واتساب: <bdi dir="ltr">+963 995 263 075</bdi></a> · <a href="mailto:onetechmena@proton.me"><bdi dir="ltr">onetechmena@proton.me</bdi></a> · <a href="/">الموقع</a> · <a href="/en/links" hreflang="en">English</a></p>
+			<p>أنظمة أتمتة وذكاء اصطناعي تعمل بالعربية، مع البرمجة والتصميم كخدمات داعمة. نخدم سوريا والخليج، ونعمل عن بعد، مقرنا حلب. هنا موقعنا وطرق التواصل وكل صفحاتنا الرسمية.</p>
+			<ul class="links-list links-contact">
+				<li><a href="/"><b>موقع الشركة</b><small>الخدمات والأسعار والأسئلة الشائعة.</small></a></li>
+				<li><a href="https://wa.me/963995263075" rel="noopener"><b>واتساب <bdi dir="ltr">+963 995 263 075</bdi></b><small>تواصل مباشر مع الفريق.</small></a></li>
+				<li><a href="mailto:onetechmena@proton.me"><b>البريد <bdi dir="ltr">onetechmena@proton.me</bdi></b><small>للاستفسارات والعروض.</small></a></li>
+			</ul>
 		</div>
 	</section>
 	<section>
 		<div class="wrap">
-			<h2 class="rv">صفحاتنا على المنصات</h2>
-			<ul class="steps-plain">
-				<li><a href="https://www.youtube.com/@OneTechMENA"><b>YouTube</b> <bdi dir="ltr">@OneTechMENA</bdi></a></li>
-				<li><a href="https://t.me/OneTechMENA"><b>Telegram</b> <bdi dir="ltr">@OneTechMENA</bdi></a></li>
-				<li><a href="https://t.me/OneTechMENADemoBot"><b>نموذج الأتمتة التجريبي</b> <bdi dir="ltr">@OneTechMENADemoBot</bdi></a></li>
-				<li><a href="https://www.linkedin.com/company/onetechmena/"><b>LinkedIn</b> <bdi dir="ltr">onetechmena</bdi></a></li>
-				<li><a href="https://www.facebook.com/61596958526046/"><b>Facebook</b> <bdi dir="ltr">OneTech Solutions</bdi></a></li>
-				<li><a href="https://www.instagram.com/onetechmena/"><b>Instagram</b> <bdi dir="ltr">@onetechmena</bdi></a></li>
-				<li><a href="https://www.snapchat.com/@onetechmena"><b>Snapchat</b> <bdi dir="ltr">@onetechmena</bdi></a></li>
-				<li><a href="https://www.tiktok.com/@onetechmena?lang=en"><b>TikTok</b> <bdi dir="ltr">@onetechmena</bdi></a></li>
-				<li><a href="https://www.whatsapp.com/channel/0029Vb9IO9z60eBfYSQGn60I"><b>قناة واتساب</b> <bdi dir="ltr">OneTech Channel</bdi></a></li>
+			<h2 class="rv">صفحاتنا وقنواتنا</h2>
+			<ul class="links-list">
+				<li><a href="https://www.youtube.com/@OneTechMENA" rel="noopener"><b>YouTube <bdi dir="ltr">@OneTechMENA</bdi></b><small>عروض مرئية قصيرة لوصفات الأتمتة المقترحة.</small></a></li>
+				<li><a href="https://t.me/OneTechMENA" rel="noopener"><b>Telegram <bdi dir="ltr">@OneTechMENA</bdi></b><small>أخبار الشركة والعروض التوضيحية.</small></a></li>
+				<li><a href="https://t.me/OneTechMENADemoBot" rel="noopener"><b>نموذج الأتمتة التجريبي <bdi dir="ltr">@OneTechMENADemoBot</bdi></b><small>بوت تجريبي ببيانات وهمية: طلبات متجر وتنبيه مخزون بالعربية.</small></a></li>
+				<li><a href="https://www.linkedin.com/company/onetechmena/" rel="noopener"><b>LinkedIn <bdi dir="ltr">onetechmena</bdi></b><small>تحديثات الشركة وخدماتها المهنية.</small></a></li>
+				<li><a href="https://www.facebook.com/61596958526046/" rel="noopener"><b>Facebook <bdi dir="ltr">OneTech Solutions</bdi></b><small>أخبار وخدمات OneTech.</small></a></li>
+				<li><a href="https://www.instagram.com/onetechmena/" rel="noopener"><b>Instagram <bdi dir="ltr">@onetechmena</bdi></b><small>فيديوهات وأفكار الأتمتة.</small></a></li>
+				<li><a href="https://www.tiktok.com/@onetechmena?lang=en" rel="noopener"><b>TikTok <bdi dir="ltr">@onetechmena</bdi></b><small>مقاطع قصيرة من الشركة.</small></a></li>
+				<li><a href="https://www.snapchat.com/@onetechmena" rel="noopener"><b>Snapchat <bdi dir="ltr">@onetechmena</bdi></b><small>حساب OneTech على Snapchat.</small></a></li>
+				<li><a href="https://www.whatsapp.com/channel/0029Vb9IO9z60eBfYSQGn60I" rel="noopener"><b>قناة واتساب <bdi dir="ltr">OneTech</bdi></b><small>تحديثات الشركة على واتساب.</small></a></li>
 			</ul>
+			<p><a href="/en/links" hreflang="en">English</a></p>
 		</div>
 	</section>
 </Base>
