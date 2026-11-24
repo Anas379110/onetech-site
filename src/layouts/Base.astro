@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import '../styles/v6.css';
+import { contact } from '../config';
 interface Props { title: string; description: string; current?: string; }
 const { title, description, current = '' } = Astro.props;
 const nav = [
@@ -36,10 +37,10 @@ const languageTarget = ['/privacy', '/terms', '/links'].includes(Astro.url.pathn
 	<meta name="twitter:card" content="summary_large_image" />
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 	<meta property="og:locale" content="ar_AR" />
-	<meta name="theme-color" content="#0F172A" />
+	<meta name="theme-color" content="#0B0A08" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&display=swap" />
 </head>
 <body>
 	<a class="skip-link" href="#main-content">تخطَّ إلى المحتوى</a>
@@ -66,6 +67,7 @@ const languageTarget = ['/privacy', '/terms', '/links'].includes(Astro.url.pathn
 				</nav>
 			</details>
 			<div class="site-controls" aria-label="اللغة والمظهر">
+			<a class="nav-cta" href={contact.whatsapp}>استشارة مجانية</a>
 			<nav class="language-switch" aria-label="اللغة" dir="ltr"><span aria-current="true" lang="ar">العربية</span><a href={languageTarget} hreflang="en" lang="en">English</a></nav>
 				<button class="theme-toggle" type="button" data-theme-toggle data-dark="الوضع الداكن" data-light="الوضع المضيء" aria-pressed="false"><span data-theme-icon aria-hidden="true">☾</span><span class="sr-only" data-theme-label>الوضع الداكن</span></button>
 			</div>
@@ -92,6 +94,7 @@ const languageTarget = ['/privacy', '/terms', '/links'].includes(Astro.url.pathn
 					<a href="/en" hreflang="en">English</a>
 				</nav>
 			</div>
+			<div class="foot-giant" aria-hidden="true">OneTech</div>
 		</div>
 	</footer>
 
