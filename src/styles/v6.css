@@ -404,3 +404,12 @@ footer.site .foot-social a { width:auto; height:auto; justify-content:flex-start
 
 footer.site .foot-all.btn-all { display:inline-flex; align-items:center; min-height:36px; margin-top:14px; padding:4px 16px; border:1px solid rgba(147,197,253,.45); border-radius:999px; color:#BFDBFE; font-size:.86rem; font-weight:600; text-decoration:none; transition:background .15s,color .15s; }
 footer.site .foot-all.btn-all:hover, footer.site .foot-all.btn-all:focus-visible { background:rgba(37,99,235,.28); color:#fff; }
+
+/* header opacity + 44px touch areas (visuals stay small) */
+header.site { background: rgba(15, 23, 42, .985); }
+.language-switch a, .language-switch span, .theme-toggle, .nav-menu summary, footer.site .foot-all.btn-all { position: relative; }
+@media (pointer: coarse), (max-width: 820px) {
+  .language-switch a::after, .theme-toggle::after, .nav-menu summary::after, footer.site .foot-all.btn-all::after { content: ""; position: absolute; inset: -6px -3px; }
+  .theme-toggle::after { inset: -4px; }
+  .nav-menu summary::after { inset: -3px -2px; }
+}
