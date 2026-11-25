@@ -521,3 +521,12 @@ html[data-theme="dark"] .timeline li { background: #17140E; border-color: #33302
 html[data-theme="dark"] .timeline b { color: #EDE9E0; }
 html[data-theme="dark"] .timeline span { color: #B3AA9D; }
 html[data-theme="dark"] .card.roadmap p { color: #C9C2B4; }
+
+/* Keep the expanded bilingual navigation on one row on desktop. */
+@media (min-width: 1151px) {
+  header.site > .header-row { max-width: 1360px; }
+  header.site .brand-link { flex-shrink: 0; }
+  header.site .brand { white-space: nowrap; }
+  header.site .main-nav { flex-wrap: nowrap; }
+  header.site .main-nav a { white-space: nowrap; }
+}
