@@ -3,6 +3,7 @@ import '../styles/global.css';
 import '../styles/v6.css';
 import { contact } from '../config';
 interface Props { title: string; description: string; }
+const canonical = new URL(Astro.url.pathname.replace(/\/$/, '') || '/', Astro.site);
 const { title, description } = Astro.props;
 const languageTarget = Astro.url.pathname.includes('/privacy') ? '/privacy' : Astro.url.pathname.includes('/terms') ? '/terms' : Astro.url.pathname.includes('/links') ? '/links' : '/';
 ---
@@ -24,6 +25,7 @@ const languageTarget = Astro.url.pathname.includes('/privacy') ? '/privacy' : As
 	<link rel="icon" type="image/png" href="/ots-logo.png" />
 	<title>{title}</title>
 	<meta name="description" content={description} />
+	<link rel="canonical" href={canonical.href} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
 	<meta property="og:image" content="/og-image.png" />

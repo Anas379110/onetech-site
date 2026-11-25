@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://onetech-site.onrender.com/sitemap.xml

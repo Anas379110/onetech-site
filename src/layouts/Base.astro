@@ -3,6 +3,7 @@ import '../styles/global.css';
 import '../styles/v6.css';
 import { contact } from '../config';
 interface Props { title: string; description: string; current?: string; }
+const canonical = new URL(Astro.url.pathname.replace(/\/$/, '') || '/', Astro.site);
 const { title, description, current = '' } = Astro.props;
 const nav = [
 	{ href: '/', label: 'الرئيسية', key: 'home' },
@@ -32,6 +33,7 @@ const languageTarget = ['/privacy', '/terms', '/links'].includes(Astro.url.pathn
 	<link rel="icon" type="image/png" href="/ots-logo.png" />
 	<title>{title}</title>
 	<meta name="description" content={description} />
+	<link rel="canonical" href={canonical.href} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
 	<meta property="og:image" content="/og-image.png" />
