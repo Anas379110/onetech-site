@@ -5,6 +5,17 @@ import CtaBand from '../components/CtaBand.astro';
 ---
 <Base current="home" title="OneTech Solutions — أنظمة أتمتة وذكاء اصطناعي بالعربية" description="OneTech Solutions تبني أنظمة أتمتة مدعومة بالذكاء الاصطناعي تعمل بالعربية: استقبال عملائك على قنواتهم، تنبيهات الطلبات والمخزون، ومساعد يجيب عن أسئلة زبائنك من ملفاتك.">
 
+	<section class="company-film" aria-labelledby="company-film-title">
+		<div class="wrap">
+			<div class="film-heading"><div><div class="eyebrow">تعرّف على OneTech Solutions</div><h2 id="company-film-title">خدماتنا اليوم، وخطتنا للمستقبل</h2></div><span>دقيقة ونصف للتعرّف علينا</span></div>
+			<video controls playsinline preload="none" width="1920" height="1080" poster="/videos/IMG-20261126-WA0010.jpg" aria-label="فيديو تعريفي بخدمات OneTech Solutions الحالية وخارطة الطريق وطرق التواصل">
+				<source src="/videos/VID-20261126-WA0011.mp4" type="video/mp4" />
+				متصفحك لا يدعم تشغيل الفيديو. <a href="/videos/VID-20261126-WA0011.mp4">افتح الفيديو التعريفي</a>.
+			</video>
+			<p class="film-note">عرض تعريفي ومحاكاة توضيحية. خدمات خارطة الطريق ليست متاحة اليوم، وتُعتمد التفاصيل والشروط عند التعاقد. <a href="/services">تفاصيل الخدمات</a> · <a href="/links">التواصل وكل الروابط</a></p>
+		</div>
+	</section>
+
 	<section class="hero6">
 		<div class="wrap hero6-grid">
 			<div>
@@ -216,5 +227,5 @@ import CtaBand from '../components/CtaBand.astro';
 
 	<CtaBand />
 
-<style>.demo-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}.demo-grid .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.demo-grid .cta-ghost{color:#24468b;border-color:#8ca5d1}.demo-note p{line-height:1.9;margin:14px 0 0}.demo-note{padding:28px}@media(max-width:700px){.demo-grid{grid-template-columns:1fr;gap:20px}.demo-grid h2{font-size:30px}.demo-note{padding:22px}}</style>
+<style>.company-film{padding:36px 0 28px;background:#0b1424;color:#edf3ff}.film-heading{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:20px}.film-heading h2{color:#edf3ff;font-size:clamp(24px,3vw,36px);margin:6px 0 0}.film-heading>span{color:#b8c8e4;font-size:14px}.company-film video{display:block;width:100%;height:auto;aspect-ratio:16/9;max-height:70vh;background:#0b1424;border:1px solid #344863;border-radius:16px}.film-note{font-size:14px;line-height:1.9;color:#becce3;margin:14px 0 0}.film-note a{color:#9ec5ff;text-decoration:underline}@media(max-width:700px){.company-film{padding:24px 0}.film-heading{display:block}.film-heading>span{display:block;margin-top:10px}.company-film video{border-radius:10px}.film-note{font-size:13px}}.demo-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}.demo-grid .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.demo-grid .cta-ghost{color:#24468b;border-color:#8ca5d1}.demo-note p{line-height:1.9;margin:14px 0 0}.demo-note{padding:28px}@media(max-width:700px){.demo-grid{grid-template-columns:1fr;gap:20px}.demo-grid h2{font-size:30px}.demo-note{padding:22px}}</style>
 </Base>
