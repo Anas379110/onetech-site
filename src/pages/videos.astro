@@ -1,17 +1,58 @@
 ---
 import Base from '../layouts/Base.astro';
+const posts = [
+  {
+    "title": "هل تضيع منك طلبات الزبائن بين الرسائل؟",
+    "paragraphs": [
+      "هذه أبسط طريقة لمعرفة أين تبدأ الأتمتة في عمل صغير:",
+      "١. اجمع الطلبات في مكان واحد بدل الرسائل المتفرقة.\n٢. حدد لكل طلب حالة واضحة، مثل جديد أو قيد التنفيذ أو جاهز.\n٣. اجعل المراجعة النهائية لك، ودع الأتمتة تذكّرك بما ينتظر ردك.",
+      "جرب المسار ببيانات تجريبية قبل أي تشغيل، وأبقِ بديلاً يدوياً إذا توقف.",
+      "هذا طرح تعليمي وتصور مقترح، وليس نتيجة منفذة لعميل.",
+      "راسلنا لنبحث معك أي مهمة تناسب البداية:\nواتساب / اتصال: +963995263075\nالبريد: onetechmena@proton.me\nالموقع: https://onetech-site.onrender.com/\nكل الروابط: https://onetech-site.onrender.com/links",
+      "التفاصيل والشروط تعتمد عند التعاقد."
+    ]
+  },
+  {
+    "title": "من أين تبدأ الأتمتة إذا كان عملك صغيراً؟",
+    "paragraphs": [
+      "لا تبدأ بأكبر مشكلة. ابدأ بأكثر مهمة تتكرر عليك كل يوم بنفس الخطوات، مثل رسالة تذكير بموعد أو تجهيز عرض سعر.",
+      "١. اكتب خطوات المهمة كما تحدث اليوم.\n٢. حدد الخطوة التي تأخذ وقتك دون أن تحتاج قرارك.\n٣. اجعل القرار النهائي لك، ودع الأتمتة تجهز المسودة فقط.",
+      "جرب المسار ببيانات تجريبية قبل أي تشغيل، وأبقِ بديلاً يدوياً جاهزاً إذا توقف.",
+      "هذا طرح تعليمي وتصور مقترح، وليس نتيجة منفذة لعميل.",
+      "راسلنا لنبحث معك أي مهمة تناسب البداية:\nواتساب / اتصال: +963995263075\nالبريد: onetechmena@proton.me\nالموقع: https://onetech-site.onrender.com/\nكل الروابط: https://onetech-site.onrender.com/links",
+      "التفاصيل والشروط تعتمد عند التعاقد."
+    ]
+  },
+  {
+    "title": "متى تكون الأتمتة قراراً سليماً لشركة صغيرة؟",
+    "paragraphs": [
+      "ليست كل مهمة تحتاج أتمتة. قبل البدء، اختبر المهمة بهذه الأسئلة:\n١. هل تتكرر أسبوعياً بنفس الخطوات؟\n٢. هل يعرف الفريق ماذا يفعل إذا حدث خطأ؟\n٣. هل يوجد بديل يدوي إذا توقف المسار؟",
+      "إذا غاب جواب واحد فالأفضل ترتيب العمل أولاً ثم أتمتته. نبدأ بمهمة واحدة صغيرة، ونجربها ببيانات تجريبية قبل أي تشغيل، ونحدد التنبيهات والبديل اليدوي المناسبين للمهمة ضمن النطاق المتفق عليه.",
+      "هذا طرح تعليمي وتصور مقترح، وليس نتيجة منفذة لعميل.",
+      "راسلنا لنبحث معك أي مهمة تناسب البداية:\nواتساب / اتصال: +963995263075\nالبريد: onetechmena@proton.me\nالموقع: https://onetech-site.onrender.com/\nكل الروابط: https://onetech-site.onrender.com/links",
+      "التفاصيل والشروط تعتمد عند التعاقد."
+    ]
+  }
+];
 const videos = [
 	{ file: 'onetech-diagnosis', title: 'هل تحتاج شركتك فعلاً إلى أتمتة', note: 'ثلاثة أسئلة بسيطة تجيبك' },
 	{ file: 'onetech-method', title: 'كيف نبني أتمتة لشركة صغيرة', note: 'خطوات عمل مقترحة بلا وعود جاهزة' },
 ];
 ---
-<Base current="videos" title="فيديوهات OneTech Solutions — أفكار أتمتة قصيرة" description="فيديوهات قصيرة من OneTech Solutions عن الأتمتة والذكاء الاصطناعي بالعربية محاكاة توضيحية وليست نتائج عملاء">
+<Base current="videos" title="فيديوهات ومنشورات OneTech Solutions — أفكار أتمتة قصيرة" description="فيديوهات ومنشورات تعليمية من OneTech Solutions عن الأتمتة والذكاء الاصطناعي بالعربية، محاكاة توضيحية وليست نتائج عملاء">
 	<style>
 	.vid-grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),320px));justify-content:start}
 	.vid-card{border:1px solid color-mix(in srgb,currentColor 22%,transparent);border-radius:14px;padding:12px}
 	.vid-card video{display:block;width:100%;height:auto;aspect-ratio:9/16;border-radius:10px;background:#000}
 	.vid-card h2{font-size:1.05rem;margin:12px 0 4px}
 	.vid-card p{margin:0;opacity:.8}
+	.insights{display:grid;gap:24px;max-width:850px}
+	.insight{border:1px solid color-mix(in srgb,currentColor 22%,transparent);border-radius:14px;padding:clamp(20px,4vw,32px)}
+	.insight h3{font-size:clamp(1.2rem,3vw,1.6rem);margin:0 0 20px}
+	.insight p{white-space:pre-line;overflow-wrap:anywhere;line-height:1.9}
+	.insight p:last-child{margin-bottom:0}
+	.post-contact p{margin:.3em 0}
+	.insight a{text-decoration:underline;text-underline-offset:4px}
 	</style>
 	<section class="page-hero">
 		<div class="wrap">
@@ -31,6 +72,27 @@ const videos = [
 						</video>
 						<h2>{v.title}</h2>
 						<p>{v.note}</p>
+					</article>
+				))}
+			</div>
+		</div>
+	</section>
+	<section aria-labelledby="written-insights">
+		<div class="wrap">
+			<h2 id="written-insights">أفكار مكتوبة للأتمتة</h2>
+			<p>منشورات تعليمية وتصورات مقترحة، وليست نتائج مشاريع عملاء.</p>
+			<div class="insights">
+				{posts.map((post) => (
+					<article class="insight">
+						<h3>{post.title}</h3>
+						{post.paragraphs.map((paragraph) => (
+							paragraph.startsWith('راسلنا') ? <div class="post-contact">
+								<p>راسلنا لنبحث معك أي مهمة تناسب البداية:</p>
+								<p>واتساب / اتصال: <a href="https://wa.me/963995263075"><bdi dir="ltr">+963995263075</bdi></a></p>
+								<p>البريد: <a href="mailto:onetechmena@proton.me"><bdi dir="ltr">onetechmena@proton.me</bdi></a></p>
+								<p><a href="/">موقع الشركة</a> · <a href="/links">كل الروابط</a></p>
+							</div> : <p>{paragraph}</p>
+						))}
 					</article>
 				))}
 			</div>
