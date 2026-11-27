@@ -1,0 +1,323 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import CtaBand from '../components/CtaBand.astro';
+---
+<Base current="methodology" title="كيف نبني أنظمة الأتمتة — OneTech Solutions" description="منهجية OneTech التقنية لبناء أنظمة الأتمتة: طرق البناء الأربع، التصميم الهجين، أماكن التشغيل، أدوار التقنيات، وعشر خطوات من الفكرة إلى التشغيل.">
+
+	<section class="page-hero">
+		<div class="wrap">
+			<div class="eyebrow rv">كيف نبني</div>
+			<h1>كيف نبني أنظمة الأتمتة</h1>
+			<p>من المشكلة إلى أبسط نظام يحلّها: هكذا نختار طريقة البناء ومكان التشغيل والتقنيات، ومتى يدخل الذكاء الاصطناعي — بلا تعقيد زائد ولا منظومة أكبر من الحاجة.</p>
+		</div>
+	</section>
+
+	<section>
+		<div class="wrap">
+			<div class="eyebrow rv">طريقة البناء</div>
+			<h2 class="rv">أربع طرق لبناء النظام</h2>
+			<p class="section-sub rv">لكل مشروع طريقة بناء أنسب. نختارها معك حسب الحجم والتخصيص المطلوب، لا حسب موضة الأدوات.</p>
+			<div class="cards rv-stagger">
+				<div class="card">
+					<Icon name="bolt" />
+					<h3>بدون كود <span dir="ltr">No-code</span></h3>
+					<p>بناء مرئي بالموصلات والخطوات الجاهزة: الأسرع للمهام الواضحة، وأسهل في التعديل والمتابعة.</p>
+				</div>
+				<div class="card">
+					<Icon name="flow" />
+					<h3>كود منخفض <span dir="ltr">Low-code</span></h3>
+					<p>بناء مرئي مع لمسات كود محدودة للتخصيص، عندما لا تكفي الخطوات الجاهزة وحدها.</p>
+				</div>
+				<div class="card">
+					<Icon name="code" />
+					<h3>كود أولًا <span dir="ltr">Code-first</span></h3>
+					<p>سكربتات أو خدمات برمجية مخصصة بالكامل، للمنطق الخاص والأداء العالي والتكامل العميق.</p>
+				</div>
+				<div class="card">
+					<Icon name="layers" />
+					<h3>هجين <span dir="ltr">Hybrid</span></h3>
+					<p>منصة لتنسيق العملية وربط الخدمات، وكود مخصص للمنطق المتخصص فقط — الخيار الذي نرجّحه غالبًا.</p>
+				</div>
+			</div>
+			<div class="roadmap-note rv">
+				<b>مبدأ ثابت:</b> لا نبني نظامًا خلفيًا منفصلًا إذا كانت المنصة وحدها تكفي للمهمة. أبسط بنية تحقق النتيجة هي البنية الصحيحة.
+			</div>
+		</div>
+	</section>
+
+	<section class="soft">
+		<div class="wrap">
+			<div class="eyebrow rv">التصميم الذي نفضّله</div>
+			<h2 class="rv">التصميم الهجين: منصة تنسيق + كود متخصص</h2>
+			<p class="section-sub rv">نبدأ بالمنصة وحدها، ولا نضيف طبقة الكود المخصص إلا لحاجة واضحة تثبتها التجربة.</p>
+			<div class="bflow rv" role="img" aria-label="مخطط التصميم الهجين: منصة تنسيق مثل n8n تنظم العملية وتربط الخدمات، فكود متخصص عند الحاجة، فقاعدة البيانات والخدمات الخارجية">
+				<div class="bflow-step">
+					<b>منصة التنسيق <span dir="ltr">(مثل n8n)</span></b>
+					<span>تنظيم العملية وربط الخدمات والمشغّلات: ويب هوك، جدول زمني، رسالة، أو حدث في نظامك.</span>
+				</div>
+				<div class="bflow-arrow" aria-hidden="true"><svg width="16" height="22" viewBox="0 0 16 22" fill="none"><path d="M8 1v16m0 0l-5-5m5 5l5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+				<div class="bflow-step">
+					<b>كود متخصص عند الحاجة <span dir="ltr">ASP.NET / Laravel / Python</span></b>
+					<span>للمنطق الذي لا تغطيه الخطوات الجاهزة: حسابات خاصة، تكامل عميق، أو أداء عالٍ.</span>
+				</div>
+				<div class="bflow-arrow" aria-hidden="true"><svg width="16" height="22" viewBox="0 0 16 22" fill="none"><path d="M8 1v16m0 0l-5-5m5 5l5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+				<div class="bflow-step">
+					<b>قاعدة البيانات والخدمات الخارجية</b>
+					<span>التخزين والتكاملات: جداول العملاء والطلبات، وقنوات التواصل، وأنظمتك الحالية.</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="wrap">
+			<div class="eyebrow rv">مكان التنفيذ</div>
+			<h2 class="rv">أين يعمل النظام؟</h2>
+			<p class="section-sub rv">أماكن تشغيل الأتمتة تتراوح من جهازك الشخصي إلى السحابة وداخل شركتك. نختار لكل مشروع ما يناسب استمراريته وحساسية بياناته وتكلفته.</p>
+			<div class="envgrid rv-stagger">
+				<div class="env"><b>جهازك الشخصي</b><span>التطوير والتجارب والأتمتة الشخصية</span></div>
+				<div class="env"><b>جهاز دائم التشغيل أو سيرفر منزلي</b><span>مهام مستمرة ضمن شبكتك</span></div>
+				<div class="env"><b>VPS أو خادم مخصص</b><span>تشغيل دائم مع إدارة ذاتية</span></div>
+				<div class="env"><b>منصة مُدارة مثل <span dir="ltr">n8n Cloud</span></b><span>تشغيل دون إدارة البنية بنفسك</span></div>
+				<div class="env"><b>داخل الشركة <span dir="ltr">On-Premises</span></b><span>الوصول للأنظمة الداخلية وإبقاء البيانات محليًا</span></div>
+				<div class="env"><b>خدمات <span dir="ltr">Serverless</span></b><span>تنفيذ دوال عند حدث أو طلب</span></div>
+				<div class="env"><b>الحاويات و<span dir="ltr">Kubernetes</span></b><span>نشر الخدمات وتوزيع التنفيذ والتوسع</span></div>
+				<div class="env"><b>جهاز مكتبي أو <span dir="ltr">VM</span></b><span>تشغيل RPA وبرامج سطح المكتب</span></div>
+				<div class="env"><b>داخل التطبيق أو قاعدة البيانات</b><span>قواعد وأحداث وإجراءات مدمجة</span></div>
+				<div class="env"><b>منظومات <span dir="ltr">CI/CD</span></b><span>الاختبارات والبناء والنشر</span></div>
+				<div class="env"><b>أجهزة <span dir="ltr">Edge</span> وإنترنت الأشياء و<span dir="ltr">PLC</span></b><span>التنفيذ قرب الأجهزة والمعدات</span></div>
+			</div>
+			<div class="roadmap-note rv">
+				<b>توضيح مهم:</b> Docker وVM وSandbox وسائل تشغيل وعزل، وQueue وسيلة توزيع مهام؛ ليست جميعها «أماكن استضافة» مستقلة — يمكن جمعها على جهاز محلي أو سيرفر أو سحابة.
+			</div>
+		</div>
+	</section>
+
+	<section class="soft">
+		<div class="wrap">
+			<div class="eyebrow rv">أدوار التقنيات</div>
+			<h2 class="rv">التقنيات حسب الدور</h2>
+			<p class="section-sub rv">خريطة بأبرز التقنيات في كل دور — لا حصرًا لكل المنتجات، ولا قائمة خدمات نقدّمها. نختار لكل مشروع أبسط أداة تحقق نتيجته.</p>
+			<div class="chips-legend rv">
+				<span><i class="chip-demo hot">n8n</i> تقنيات نبني بها أنظمتنا اليوم</span>
+				<span><i class="chip-demo">أداة</i> تقنيات شائعة نختار منها عند الحاجة</span>
+			</div>
+			<div class="rolemap rv">
+				<div class="role"><b>سير العمل وربط التطبيقات</b><div class="chips"><span class="chip hot" dir="ltr">n8n</span><span class="chip" dir="ltr">Make</span><span class="chip" dir="ltr">Zapier</span><span class="chip" dir="ltr">Power Automate</span><span class="chip" dir="ltr">Pipedream</span><span class="chip" dir="ltr">Activepieces</span></div></div>
+				<div class="role"><b>التكامل المؤسسي</b><div class="chips"><span class="chip" dir="ltr">Workato</span><span class="chip" dir="ltr">Tray.ai</span></div></div>
+				<div class="role"><b>أتمتة سطح المكتب <span dir="ltr">RPA</span></b><div class="chips"><span class="chip" dir="ltr">Power Automate Desktop</span><span class="chip" dir="ltr">UiPath</span><span class="chip" dir="ltr">Automation Anywhere</span><span class="chip" dir="ltr">Blue Prism</span></div></div>
+				<div class="role"><b>أتمتة المتصفح</b><div class="chips"><span class="chip" dir="ltr">Playwright</span><span class="chip" dir="ltr">Selenium</span><span class="chip" dir="ltr">Puppeteer</span><span class="chip" dir="ltr">Browser Use</span></div></div>
+				<div class="role"><b>البرمجة المخصصة</b><div class="chips"><span class="chip" dir="ltr">Python</span><span class="chip" dir="ltr">JavaScript / TypeScript</span><span class="chip" dir="ltr">C#</span><span class="chip" dir="ltr">PowerShell</span><span class="chip" dir="ltr">Bash</span><span class="chip" dir="ltr">PHP</span></div></div>
+				<div class="role"><b>المهام المجدولة</b><div class="chips"><span class="chip" dir="ltr">Cron</span><span class="chip" dir="ltr">Task Scheduler</span></div></div>
+				<div class="role"><b>تنسيق العمليات</b><div class="chips"><span class="chip" dir="ltr">Temporal</span><span class="chip" dir="ltr">Cloud Workflows</span><span class="chip" dir="ltr">Step Functions</span></div></div>
+				<div class="role"><b>البيانات و<span dir="ltr">ETL</span></b><div class="chips"><span class="chip" dir="ltr">Airflow</span><span class="chip" dir="ltr">Prefect</span><span class="chip" dir="ltr">Dagster</span><span class="chip" dir="ltr">Kestra</span><span class="chip" dir="ltr">Airbyte</span><span class="chip" dir="ltr">dbt</span><span class="chip" dir="ltr">NiFi</span><span class="chip" dir="ltr">SSIS</span></div></div>
+				<div class="role"><b>التطوير والنشر <span dir="ltr">DevOps</span></b><div class="chips"><span class="chip" dir="ltr">GitHub Actions</span><span class="chip" dir="ltr">GitLab CI</span><span class="chip" dir="ltr">Jenkins</span><span class="chip" dir="ltr">Azure DevOps</span></div></div>
+				<div class="role"><b>البنية التحتية</b><div class="chips"><span class="chip" dir="ltr">Terraform</span><span class="chip" dir="ltr">Pulumi</span><span class="chip" dir="ltr">Ansible</span><span class="chip" dir="ltr">Docker</span><span class="chip" dir="ltr">Kubernetes</span></div></div>
+				<div class="role"><b>بناء وكلاء الذكاء الاصطناعي و<span dir="ltr">RAG</span></b><div class="chips"><span class="chip hot" dir="ltr">n8n</span><span class="chip" dir="ltr">LangChain</span><span class="chip" dir="ltr">LlamaIndex</span><span class="chip" dir="ltr">CrewAI</span><span class="chip" dir="ltr">Semantic Kernel</span><span class="chip" dir="ltr">Dify</span><span class="chip" dir="ltr">Flowise</span><span class="chip" dir="ltr">Langflow</span></div></div>
+				<div class="role"><b>تشغيل النماذج</b><div class="chips"><span class="chip" dir="ltr">Ollama</span><span class="chip" dir="ltr">LM Studio</span><span class="chip" dir="ltr">vLLM</span></div></div>
+				<div class="role"><b>المراقبة</b><div class="chips"><span class="chip" dir="ltr">Grafana</span><span class="chip" dir="ltr">Prometheus</span><span class="chip" dir="ltr">Sentry</span><span class="chip" dir="ltr">OpenTelemetry</span></div></div>
+				<div class="role"><b>قواعد البيانات والتخزين</b><div class="chips"><span class="chip hot" dir="ltr">PostgreSQL / Supabase</span><span class="chip" dir="ltr">Qdrant</span><span class="chip" dir="ltr">pgvector</span></div></div>
+				<div class="role"><b>المنزل والصناعة</b><div class="chips"><span class="chip" dir="ltr">Home Assistant</span><span class="chip" dir="ltr">Node-RED</span><span class="chip" dir="ltr">PLC</span><span class="chip" dir="ltr">SCADA</span></div></div>
+				<div class="role"><b>القنوات والتكاملات اليومية</b><div class="chips"><span class="chip hot" dir="ltr">Telegram Bot API</span><span class="chip hot" dir="ltr">Google Workspace</span><span class="chip" dir="ltr">WhatsApp</span><span class="chip" dir="ltr">APIs</span></div></div>
+			</div>
+			<div class="roadmap-note rv">
+				<b>الأدوار مختلفة:</b> Ollama يشغّل النموذج، وn8n ينسّق العملية، وPostgreSQL يخزّن البيانات، وPlaywright يتحكم بالمتصفح — نجمع منها ما تحتاجه مهمتك فقط.
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="wrap">
+			<div class="eyebrow rv">الذكاء الاصطناعي</div>
+			<h2 class="rv">الأتمتة داخل أدوات الذكاء الاصطناعي</h2>
+			<p class="section-sub rv">يمكن تنفيذ مهام من داخل واجهات الذكاء الاصطناعي نفسها، بحسب الأدوات والصلاحيات المتاحة في كل منتج وخطة.</p>
+			<div class="envgrid rv-stagger">
+				<div class="env"><b dir="ltr">ChatGPT</b><span>تعليمات مخصصة وملفات وتحليل بيانات واتصال بأدوات وخدمات</span></div>
+				<div class="env"><b dir="ltr">Claude</b><span>مشاريع ومعرفة وأدوات وMCP ومهام برمجية</span></div>
+				<div class="env"><b dir="ltr">Gemini</b><span>مساعدات مخصصة Gems وتكامل مع خدمات Google</span></div>
+				<div class="env"><b dir="ltr">Microsoft Copilot</b><span>العمل داخل تطبيقات Microsoft ووكلاء Copilot Studio</span></div>
+			</div>
+			<div class="vs rv">
+				<div class="vs-col">
+					<h3>مساعد تفاعلي</h3>
+					<p class="vs-flow">أنت تطلب <span class="arw">←</span> الذكاء الاصطناعي يستخدم الأدوات <span class="arw">←</span> تحصل على النتيجة</p>
+					<p>يعمل عندما تطلب منه، وأنت حاضر في كل خطوة.</p>
+				</div>
+				<div class="vs-col">
+					<h3>نظام أتمتة مستقل</h3>
+					<p class="vs-flow">حدث أو موعد <span class="arw">←</span> تنفيذ خطوات <span class="arw">←</span> تسجيل النتيجة <span class="arw">←</span> معالجة الفشل</p>
+					<p>يعمل في الخلفية دون تدخلك، ويسجّل ويُنبّه عند الخطأ.</p>
+				</div>
+			</div>
+			<div class="roadmap-note rv">
+				<b>التمييز الأهم:</b> وجود ملفات وتعليمات داخل مساعد ذكي لا يعني وحده نظامًا يعمل تلقائيًا في الخلفية — نحدد لك أي النوعين تحتاج فعلًا.
+			</div>
+		</div>
+	</section>
+
+	<section class="soft">
+		<div class="wrap">
+			<div class="eyebrow rv">منظومة Google</div>
+			<h2 class="rv">الأتمتة داخل منظومة Google</h2>
+			<p class="section-sub rv">خيارات متدرجة داخل Google، من التدفقات الجاهزة إلى بناء وكلاء كاملة على سحابتها.</p>
+			<div class="envgrid rv-stagger">
+				<div class="env"><b dir="ltr">Google Workspace Studio</b><span>بناء تدفقات داخل Workspace بمساعدة Gemini</span></div>
+				<div class="env"><b dir="ltr">Google Apps Script</b><span>منطق مخصص لخدمات Sheets وGmail وDrive وغيرها</span></div>
+				<div class="env"><b dir="ltr">Gemini API</b><span>فهم النصوص وتوليدها واستدعاء الأدوات داخل تطبيقك</span></div>
+				<div class="env"><b dir="ltr">Google Cloud Workflows</b><span>تنسيق خدمات وواجهات برمجية سحابية</span></div>
+				<div class="env"><b dir="ltr">Eventarc</b><span>توجيه الأحداث لتشغيل الخدمات</span></div>
+				<div class="env"><b dir="ltr">Cloud Run / Functions</b><span>تشغيل كود أو حاويات</span></div>
+				<div class="env"><b dir="ltr">Vertex AI وأدوات الوكلاء</b><span>بناء حلول ذكاء اصطناعي ووكلاء ضمن Google Cloud</span></div>
+			</div>
+			<h3 class="example-title rv">مثال يجمع Google مع منصة خارجية</h3>
+			<div class="bflow rv" role="img" aria-label="مخطط مثال: نموذج Google Form، فتنسيق عبر n8n أو Apps Script، فالتحقق من البيانات، فتصنيف الطلب عبر Gemini عند الحاجة، فالحفظ في Sheets أو قاعدة بيانات، فإشعار عبر Gmail أو Telegram">
+				<div class="bflow-step"><b>نموذج <span dir="ltr">Google Form</span></b><span>يستقبل الطلب من العميل</span></div>
+				<div class="bflow-arrow" aria-hidden="true"><svg width="16" height="22" viewBox="0 0 16 22" fill="none"><path d="M8 1v16m0 0l-5-5m5 5l5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+				<div class="bflow-step"><b>التنسيق عبر <span dir="ltr">n8n</span> أو <span dir="ltr">Apps Script</span></b><span>ثم التحقق من البيانات</span></div>
+				<div class="bflow-arrow" aria-hidden="true"><svg width="16" height="22" viewBox="0 0 16 22" fill="none"><path d="M8 1v16m0 0l-5-5m5 5l5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+				<div class="bflow-step"><b>تصنيف الطلب عبر <span dir="ltr">Gemini</span> عند الحاجة</b><span>ثم الحفظ في <span dir="ltr">Google Sheets</span> أو قاعدة بيانات</span></div>
+				<div class="bflow-arrow" aria-hidden="true"><svg width="16" height="22" viewBox="0 0 16 22" fill="none"><path d="M8 1v16m0 0l-5-5m5 5l5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+				<div class="bflow-step"><b>إشعار فوري</b><span>عبر <span dir="ltr">Gmail</span> أو <span dir="ltr">Telegram</span></span></div>
+			</div>
+			<div class="roadmap-note rv">
+				الاختيار لا يُبنى على اسم المنصة، بل على المشغّلات والتكاملات وضوابط التشغيل التي تحتاجها، وما تدعمه خطتك.
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="wrap">
+			<div class="eyebrow rv">مسطلحات</div>
+			<h2 class="rv">مصطلحات ستصادفها</h2>
+			<p class="section-sub rv">مكونات تُذكر كثيرًا في مشاريع الأتمتة والذكاء الاصطناعي، ودور كل منها باختصار.</p>
+			<div class="cards rv-stagger">
+				<div class="card"><h3>واجهة برمجية <span dir="ltr">API / Connector</span></h3><p>الاتصال بخدمة وقراءة بياناتها أو تنفيذ إجراءات فيها.</p></div>
+				<div class="card"><h3 dir="ltr">MCP</h3><p>إتاحة أدوات ومصادر للوكيل عبر بروتوكول موحّد.</p></div>
+				<div class="card"><h3 dir="ltr">RAG</h3><p>استرجاع معلومات من ملفاتك ومصادرك قبل صياغة الإجابة.</p></div>
+				<div class="card"><h3>الذاكرة <span dir="ltr">Memory</span></h3><p>حفظ سياق أو معلومات مطلوبة بين التفاعلات.</p></div>
+				<div class="card"><h3>المهارات <span dir="ltr">Skills</span></h3><p>تعليمات وإجراءات قابلة لإعادة الاستخدام ضمن بيئة تدعمها.</p></div>
+				<div class="card"><h3>الإضافات <span dir="ltr">Plugins</span></h3><p>إضافات توسّع قدرات الأداة.</p></div>
+				<div class="card"><h3 dir="ltr">Hooks</h3><p>تشغيل إجراءات عند نقاط أو أحداث محددة.</p></div>
+			</div>
+			<div class="roadmap-note rv">
+				لا تحتاج تثبيتها كلها — نبدأ بالوظيفة المطلوبة، ثم نضيف المكوّن الذي يحل نقصًا حقيقيًا.
+			</div>
+		</div>
+	</section>
+
+	<section class="soft">
+		<div class="wrap">
+			<div class="eyebrow rv">طريقة العمل</div>
+			<h2 class="rv">عشر خطوات نبني بها أي نظام</h2>
+			<p class="section-sub rv">من الفكرة إلى التشغيل: مسار واحد واضح نتبعه في كل مشروع، صغيرًا كان أو كبيرًا.</p>
+			<ol class="timeline rv">
+				<li><b>نحدد المشكلة والنتيجة</b><span>ما العملية اليومية التي نؤتمتها، وما شكل النجاح المقاس؟</span></li>
+				<li><b>نرسم المسار</b><span>المدخلات والخطوات والمخرجات قبل اختيار أي أداة.</span></li>
+				<li><b>نختار المشغّل</b><span>يدوي، جدول زمني، Webhook، أو حدث في نظامك.</span></li>
+				<li><b>نختار أبسط أداة</b><span>أقل تقنية تحقق المطلوب بجودة، لا أكثرها شهرة.</span></li>
+				<li><b>نجهّز الاتصالات</b><span>الحسابات والصلاحيات اللازمة لكل خدمة في المسار.</span></li>
+				<li><b>نبني مسارًا صغيرًا كاملًا</b><span>نسخة أولى تعمل من البداية للنهاية ونختبرها.</span></li>
+				<li><b>نختبر الحالات الصعبة</b><span>بيانات ناقصة، تكرار، انقطاع، وفشل في كل خطوة.</span></li>
+				<li><b>نضيف السجلات والتنبيهات</b><span>تتبّع لكل عملية وإعادة محاولة عند الخطأ.</span></li>
+				<li><b>نضع موافقة بشرية</b><span>قبل أي إجراء حساس: حذف، دفع، أو رسالة باسمك.</span></li>
+				<li><b>ننشر ونراقب</b><span>في البيئة المناسبة، مع متابعة الأداء والتكلفة.</span></li>
+			</ol>
+		</div>
+	</section>
+
+	<section>
+		<div class="wrap">
+			<div class="eyebrow rv">الحزمة العملية</div>
+			<h2 class="rv">الحزمة التي نقترحها لبدايتك</h2>
+			<p class="section-sub rv">حزمة عملية مجرّبة نبدأ منها معظم المشاريع، ونضيف إليها فقط ما تثبت الحاجة إليه.</p>
+			<div class="stack rv">
+				<div class="stack-head"><Icon name="spark" /><b>الأساس: <span dir="ltr">n8n</span> للتنسيق</b></div>
+				<ul class="stack-list">
+					<li><b>مشغّلات:</b> Webhook أو جدول زمني أو Telegram</li>
+					<li><b>تكاملات:</b> Google Workspace وواجهات APIs</li>
+					<li><b>قاعدة بيانات:</b> PostgreSQL</li>
+					<li><b>ذكاء اصطناعي اختياري:</b> Gemini أو نموذج يعمل محليًا عبر Ollama</li>
+					<li><b>معرفة اختيارية:</b> RAG مع pgvector أو Qdrant</li>
+					<li><b>أدوات اختيارية:</b> MCP</li>
+					<li><b>متصفح عند الحاجة:</b> Playwright</li>
+					<li><b>نظام خلفي مخصص عند الحاجة:</b> ASP.NET أو Laravel أو Python</li>
+				</ul>
+			</div>
+			<div class="roadmap-note rv">
+				<b>نبدأ صغيرًا:</b> «استقبال طلب ← تحقق ← حفظ ← إشعار»، ثم نضيف الذكاء الاصطناعي أو الوكيل أو RAG عندما تظهر حاجة واضحة، بدل بناء منظومة معقدة منذ اليوم الأول.
+			</div>
+		</div>
+	</section>
+
+	<section class="soft">
+		<div class="wrap">
+			<div class="eyebrow rv">الصورة الكاملة</div>
+			<h2 class="rv">أنواع الأتمتة من المهمة الواحدة إلى الأتمتة الشاملة</h2>
+			<p class="section-sub rv">خريطة المصطلحات التي تسمعها في السوق، وأين يقع كل منها في رحلة مشروعك.</p>
+			<div class="typelist rv">
+				<div class="trow"><b>أتمتة مهمة <span dir="ltr">Task Automation</span></b><span>أتمتة مهمة واحدة متكررة، كإشعار عند وصول نموذج.</span></div>
+				<div class="trow"><b>أتمتة مسار عمل <span dir="ltr">Workflow Automation</span></b><span>تمرير العمل بين خطوات وأنظمة وأشخاص: طلب ← موافقة ← إشعار ← مهمة.</span></div>
+				<div class="trow"><b>أتمتة العمليات <span dir="ltr">BPA</span></b><span>أتمتة عملية كاملة من البداية للنهاية: دورة الطلب، التوظيف، الفواتير.</span></div>
+				<div class="trow"><b>تكامل الأنظمة <span dir="ltr">iPaaS</span></b><span>ربط الأنظمة ومزامنة البيانات بينها، كالمتجر مع المخزون والمحاسبة.</span></div>
+				<div class="trow"><b>أتمتة الروبوتات <span dir="ltr">RPA</span></b><span>بوت يحاكي نقرات الإنسان في برامج لا تملك واجهة برمجية.</span></div>
+				<div class="trow"><b>أتمتة المستندات <span dir="ltr">IDP</span></b><span>قراءة المستندات واستخراج بياناتها، كالفواتير والعقود.</span></div>
+				<div class="trow"><b>أتمتة البيانات</b><span>جمع وتنظيف وتحويل وتحديث البيانات، كتقرير مبيعات يومي تلقائي.</span></div>
+				<div class="trow"><b>أتمتة الاختبارات</b><span>اختبار البرمجيات تلقائيًا بعد كل تحديث.</span></div>
+				<div class="trow"><b>أتمتة تقنية المعلومات</b><span>مهام السيرفرات والشبكات: نسخ احتياطي، حسابات، مراقبة.</span></div>
+				<div class="trow"><b>أتمتة التسويق والمبيعات</b><span>تقييم العملاء المحتملين والمتابعة والحملات البريدية.</span></div>
+				<div class="trow"><b>الأتمتة الذكية <span dir="ltr">IPA</span></b><span>أتمتة مع ذكاء اصطناعي لقرارات وبيانات غير مهيكلة، كتصنيف الشكاوى.</span></div>
+				<div class="trow"><b>وكلاء الذكاء الاصطناعي <span dir="ltr">Agentic AI</span></b><span>وكيل يخطط وينفذ خطوات متعددة عبر أدوات: يرد، يبحث، يحدّث السجلات.</span></div>
+				<div class="trow"><b>الأتمتة الشاملة <span dir="ltr">Hyperautomation</span></b><span>دمج عدة أنواع في منظومة واحدة على مستوى المؤسسة.</span></div>
+			</div>
+			<div class="roadmap-note rv">
+				هذه الأنواع تتوزع على مستويات خدماتنا التسعة: من أتمتة المهام وسير العمل (المستويات 1–4)، إلى الأتمتة الذكية (5)، إلى الأنظمة والتطبيقات بأتمتة مدمجة (6–7)، إلى وكلاء الذكاء الاصطناعي والأتمتة الشاملة (8–9). <a href="/services">تفاصيل الخدمات والمستويات ←</a>
+			</div>
+		</div>
+	</section>
+
+	<CtaBand />
+
+<style>
+	.bflow{display:grid;max-width:680px}
+	.bflow-step{background:var(--surface,var(--white));border:1px solid var(--line);border-radius:14px;padding:16px 20px;box-shadow:var(--shadow-sm)}
+	.bflow-step b{display:block;color:var(--ink);font-size:1.02rem;margin-bottom:4px}
+	.bflow-step span{color:var(--muted);font-size:.93rem;line-height:1.8}
+	.bflow-arrow{display:flex;justify-content:center;padding:5px 0;color:var(--blue)}
+	.envgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+	.env{background:var(--surface,var(--white));border:1px solid var(--line);border-radius:14px;padding:14px 18px}
+	.env b{display:block;color:var(--ink);font-size:.98rem;margin-bottom:3px}
+	.env span{color:var(--muted);font-size:.9rem;line-height:1.8}
+	.rolemap{display:grid;gap:12px}
+	.role{background:var(--surface,var(--white));border:1px solid var(--line);border-radius:14px;padding:14px 18px}
+	.role>b{display:block;color:var(--ink);margin-bottom:9px;font-size:.99rem}
+	.chips{display:flex;flex-wrap:wrap;gap:8px}
+	.chip{border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:.82rem;color:var(--muted);background:var(--bg-soft)}
+	.chip.hot{color:var(--blue);border-color:var(--blue);font-weight:700;background:var(--blue-soft)}
+	.chips-legend{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:18px;color:var(--muted);font-size:.85rem}
+	.chips-legend span{display:inline-flex;align-items:center;gap:8px}
+	.chip-demo{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:1px 10px;font-size:.78rem;color:var(--muted);background:var(--bg-soft);font-style:normal}
+	.chip-demo.hot{color:var(--blue);border-color:var(--blue);background:var(--blue-soft);font-weight:700}
+	.vs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+	.vs-col{background:var(--surface,var(--white));border:1px solid var(--line);border-radius:16px;padding:20px 22px;box-shadow:var(--shadow-sm)}
+	.vs-col h3{color:var(--ink);font-size:1.05rem;margin-bottom:10px;font-weight:800}
+	.vs-col p{color:var(--muted);font-size:.94rem}
+	.vs-flow{color:var(--ink)!important;font-weight:700;background:var(--bg-soft);border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin-bottom:12px;line-height:2}
+	.vs-flow .arw{color:var(--blue)}
+	.example-title{color:var(--ink);font-size:1.05rem;font-weight:800;margin:30px 0 14px}
+	.stack{background:var(--surface,var(--white));border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow-sm);max-width:680px}
+	.stack-head{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+	.stack-head b{color:var(--ink);font-size:1.05rem}
+	.stack-list{list-style:none;display:grid;gap:8px}
+	.stack-list li{color:var(--muted);font-size:.95rem;padding-inline-start:14px;border-inline-start:2px solid var(--line)}
+	.stack-list li b{color:var(--ink)}
+	.typelist{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:4px 32px}
+	.trow{padding:11px 0;border-bottom:1px solid var(--line)}
+	.trow b{display:block;color:var(--ink);font-size:.97rem}
+	.trow span{color:var(--muted);font-size:.9rem}
+	.roadmap-note a{color:var(--blue);font-weight:700;text-decoration:none}
+	.roadmap-note a:hover{text-decoration:underline}
+	@media(max-width:700px){.vs{grid-template-columns:1fr}}
+</style>
+
+</Base>
